@@ -1,11 +1,12 @@
-package `in`.istevit.app
+package `in`.istevit.app.ui
 
+import `in`.istevit.app.R
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class OnBoardingActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_on_boarding)
+        setContentView(R.layout.activity_main)
     }
 }

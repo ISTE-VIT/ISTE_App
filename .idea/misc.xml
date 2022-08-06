@@ -3,8 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/onboarding_dot_default.xml" value="0.157" />
+        <entry key="app/src/main/res/drawable/onboarding_dot_selected.xml" value="0.157" />
+        <entry key="app/src/main/res/drawable/onboarding_dot_selector.xml" value="0.157" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1644021739130435" />
+        <entry key="app/src/main/res/layout/activity_on_boarding.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.24331766764322918" />
+        <entry key="app/src/main/res/layout/fragment_onboarding.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.28229166666666666" />
       </map>
     </option>
