@@ -3,14 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/image_cover.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/onboarding_dot_default.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/onboarding_dot_selected.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/onboarding_dot_selector.xml" value="0.157" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1644021739130435" />
         <entry key="app/src/main/res/layout/activity_on_boarding.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.24331766764322918" />
+        <entry key="app/src/main/res/layout/fragment_announcements.xml" value="0.26777292887369786" />
         <entry key="app/src/main/res/layout/fragment_onboarding.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/single_announcements_item.xml" value="0.3512490977411685" />
+        <entry key="app/src/main/res/layout/single_carousel_item.xml" value="0.23462922469429345" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.28229166666666666" />
       </map>
     </option>
   </component>
