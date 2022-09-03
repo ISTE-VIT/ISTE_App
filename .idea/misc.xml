@@ -7,10 +7,12 @@
         <entry key="app/src/main/res/drawable/onboarding_dot_default.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/onboarding_dot_selected.xml" value="0.157" />
         <entry key="app/src/main/res/drawable/onboarding_dot_selector.xml" value="0.157" />
+        <entry key="app/src/main/res/layout/activity_blog_details.xml" value="0.23370232215294467" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1644021739130435" />
         <entry key="app/src/main/res/layout/activity_on_boarding.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.24331766764322918" />
-        <entry key="app/src/main/res/layout/fragment_announcements.xml" value="0.26777292887369786" />
+        <entry key="app/src/main/res/layout/fragment_announcements.xml" value="0.22675120035807284" />
+        <entry key="app/src/main/res/layout/fragment_blog_details.xml" value="0.3100600975147193" />
         <entry key="app/src/main/res/layout/fragment_onboarding.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/single_announcements_item.xml" value="0.3512490977411685" />
@@ -24,5 +26,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.3100600975147193" />
+      </ProjectState>
+    </option>
   </component>
 </project>

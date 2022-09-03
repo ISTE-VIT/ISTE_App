@@ -1,4 +1,4 @@
-package `in`.istevit.app
+package `in`.istevit.app.ui.announcements
 
 import `in`.istevit.app.adapters.AnnouncementsAdapter
 import `in`.istevit.app.adapters.CarouselAdapter
@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
-
 
 class AnnouncementsFragment : Fragment() {
     lateinit var binding: FragmentAnnouncementsBinding
@@ -91,11 +90,11 @@ class AnnouncementsFragment : Fragment() {
 
         carouselAdapter.submitList(carouselList.toMutableList())
 
-        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "", "blog"))
-        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "", "blog"))
-        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "", "blog"))
-        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "", "blog"))
-        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "", "blog"))
+        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "vandit", "", "blog"))
+        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "shyam", "", "blog"))
+        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "sahith", "", "blog"))
+        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "dhanush", "", "blog"))
+        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "manan", "", "blog"))
         announcementsAdapter.submitList(announcementsList)
     }
 

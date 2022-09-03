@@ -1,6 +1,5 @@
 package `in`.istevit.app.ui
 
-import `in`.istevit.app.R
 import `in`.istevit.app.databinding.ActivityMainBinding
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
