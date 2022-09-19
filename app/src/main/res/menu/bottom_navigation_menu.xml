@@ -1,28 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/nav_movie"
+        android:id="@+id/nav_home"
         android:icon="@drawable/ic_home"
-        android:iconTint="@color/white"
+        app:cnb_iconColor="@color/blue"
+        app:cnb_textColor="@color/blue"
         android:title="Home"/>
 
     <item
-        android:id="@+id/nav_series"
-        android:icon="@drawable/ic_home"
-        android:iconTint="@color/white"
+        android:id="@+id/nav_blog"
+        android:icon="@drawable/ic_blog"
+        app:cnb_iconColor="@color/blue"
+        app:cnb_textColor="@color/blue"
         android:title="Blogs"/>
 
     <item
-        android:id="@+id/nav_search"
-        android:icon="@drawable/ic_home"
-        android:iconTint="@color/white"
+        android:id="@+id/nav_more"
+        android:icon="@drawable/ic_add"
+        app:cnb_iconColor="@color/blue"
+        app:cnb_textColor="@color/blue"
+        android:title="" />
+
+    <item
+        android:id="@+id/nav_event"
+        android:icon="@drawable/ic_event"
+        app:cnb_iconColor="@color/blue"
+        app:cnb_textColor="@color/blue"
         android:title="Events"/>
 
     <item
-        android:id="@+id/nav_favourites"
-        android:icon="@drawable/ic_home"
-        android:iconTint="@color/white"
-        android:title="Settings"/>
+        android:id="@+id/nav_gallery"
+        android:icon="@drawable/ic_gallery"
+        app:cnb_iconColor="@color/blue"
+        app:cnb_textColor="@color/blue"
+        android:title="Gallery"/>
 
 </menu>

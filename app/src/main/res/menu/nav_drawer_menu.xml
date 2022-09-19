@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_reload"
+            android:iconTint="@color/white"
+            android:textColor="@color/white"
+            android:title="Resources"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_close"
+            android:iconTint="@color/white"
+            android:textColor="@color/white"
+            android:title="Flagship Event"/>
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_event"
+            android:iconTint="@color/white"
+            android:textColor="@color/white"
+            android:title="About us"/>
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_gallery"
+            android:iconTint="@color/white"
+            android:textColor="@color/white"
+            android:title="FAQs"/>
+    </group>
+
+</menu>

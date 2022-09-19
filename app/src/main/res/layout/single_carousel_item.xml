@@ -6,7 +6,7 @@
     <data>
         <variable
             name="listItem"
-            type="in.istevit.app.data.model.CarouselData" />
+            type="in.istevit.app.data.model.home.HomeCarouselData" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -23,8 +23,8 @@
             <ImageView
                 android:id="@+id/carousel_imageView"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                loadImage="@{listItem.image}"
+                android:layout_height="220dp"
+                loadCarouselImage="@{listItem.image}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

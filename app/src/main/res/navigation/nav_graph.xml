@@ -9,13 +9,30 @@
         android:name="in.istevit.app.ui.announcements.AnnouncementsFragment"
         android:label="fragment_announcements"
         tools:layout="@layout/fragment_announcements" >
-        <action
-            android:id="@+id/action_announcementsFragment_to_blogDetailsFragment"
-            app:destination="@id/blogDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/blogDetailsFragment"
-        android:name="in.istevit.app.ui.blogs.BlogDetailsFragment"
+        android:id="@+id/blogFragment"
+        android:name="in.istevit.app.ui.blogs.BlogFragment"
         android:label="fragment_blog"
-        tools:layout="@layout/fragment_blog_details" />
+        tools:layout="@layout/fragment_blog" />
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="in.istevit.app.ui.events.EventFragment"
+        android:label="fragment_event"
+        tools:layout="@layout/fragment_event" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="in.istevit.app.ui.gallery.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="in.istevit.app.ui.projects.ProjectsFragment"
+        android:label="fragment_projects"
+        tools:layout="@layout/fragment_projects" />
+    <fragment
+        android:id="@+id/resourcesFragment"
+        android:name="in.istevit.app.ResourcesFragment"
+        android:label="fragment_resources"
+        tools:layout="@layout/fragment_resources" />
 </navigation>

@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/dark_gray">
+        android:background="@color/bg_color">
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:paddingBottom="@dimen/margin_medium"
+                android:background="@color/bg_color"
                 app:tabBackground="@drawable/onboarding_dot_selector"
                 app:tabGravity="center"
                 app:tabIndicatorHeight="0dp"
@@ -40,7 +41,7 @@
             android:paddingBottom="@dimen/margin_medium"
             android:text="@string/next_btn"
             app:cornerRadius="@dimen/corner_radius"
-            android:backgroundTint="@color/accent_color"
+            android:backgroundTint="@color/blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

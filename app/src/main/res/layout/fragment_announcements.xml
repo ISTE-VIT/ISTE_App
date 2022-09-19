@@ -11,7 +11,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/bg_color">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/carousel_recview"
@@ -29,6 +30,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:text="Announcements"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/carousel_recview" />

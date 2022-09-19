@@ -1,6 +1,6 @@
 package `in`.istevit.app.adapters
 
-import `in`.istevit.app.data.model.CarouselData
+import `in`.istevit.app.data.model.home.HomeCarouselData
 import `in`.istevit.app.databinding.SingleCarouselItemBinding
 import android.content.Context
 import android.view.LayoutInflater
@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class CarouselAdapter(val context: Context): ListAdapter<CarouselData, CarouselAdapter.ItemViewHolder>(DiffUtil()) {
+class CarouselAdapter(val context: Context): ListAdapter<HomeCarouselData, CarouselAdapter.ItemViewHolder>(DiffUtil()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val binding = SingleCarouselItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -24,19 +24,19 @@ class CarouselAdapter(val context: Context): ListAdapter<CarouselData, CarouselA
         holder.bind(item)
     }
 
-    class DiffUtil: androidx.recyclerview.widget.DiffUtil.ItemCallback<CarouselData>() {
-        override fun areItemsTheSame(oldItem: CarouselData, newItem: CarouselData): Boolean {
+    class DiffUtil: androidx.recyclerview.widget.DiffUtil.ItemCallback<HomeCarouselData>() {
+        override fun areItemsTheSame(oldItem: HomeCarouselData, newItem: HomeCarouselData): Boolean {
             return oldItem.title == newItem.title
         }
 
-        override fun areContentsTheSame(oldItem: CarouselData, newItem: CarouselData): Boolean {
+        override fun areContentsTheSame(oldItem: HomeCarouselData, newItem: HomeCarouselData): Boolean {
             return oldItem == newItem
         }
 
     }
 
     inner class ItemViewHolder(private val binding: SingleCarouselItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: CarouselData){
+        fun bind(item: HomeCarouselData){
             binding.listItem = item
             binding.carouselMainCard.setOnClickListener {
                 Toast.makeText(context, item.title, Toast.LENGTH_LONG).show()
@@ -45,8 +45,8 @@ class CarouselAdapter(val context: Context): ListAdapter<CarouselData, CarouselA
     }
 }
 
-@BindingAdapter("loadImage")
-fun loadImage(item_imageView: ImageView, url: String){
+@BindingAdapter("loadCarouselImage")
+fun loadCarouselImage(item_imageView: ImageView, url: String){
     Glide.with(item_imageView)
         .load(url)
         .centerCrop()

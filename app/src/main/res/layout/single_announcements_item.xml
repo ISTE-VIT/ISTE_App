@@ -5,22 +5,32 @@
     <data>
         <variable
             name="listItem"
-            type="in.istevit.app.data.model.AnnouncementsData" />
+            type="in.istevit.app.data.model.home.HomeAnnouncementsData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/announcements_root"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp">
+        android:layout_margin="16dp"
+        android:background="@color/bg_color">
 
-        <ImageView
-            android:id="@+id/imgView"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            loadAnnouncementsImage="@{listItem.image}"
+            android:backgroundTint="@color/bg_color"
+            app:cardCornerRadius="18dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                loadAnnouncementsImage="@{listItem.image}" />
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/eventNameTV"
@@ -29,17 +39,21 @@
             android:layout_margin="16dp"
             android:text="@{listItem.title}"
             android:textSize="20sp"
+            android:textColor="@color/white"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/imgView"/>
+            app:layout_constraintStart_toEndOf="@id/cardView"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_margin="16dp"
             android:text="@{listItem.description}"
-            app:layout_constraintBottom_toBottomOf="@+id/imgView"
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:maxLines="3"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/imgView"
+            app:layout_constraintStart_toEndOf="@id/cardView"
             app:layout_constraintTop_toBottomOf="@id/eventNameTV" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

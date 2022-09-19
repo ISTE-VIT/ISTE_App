@@ -8,4 +8,7 @@
     <string name="on_boarding_1">Trying to find the right tech domain for you? We\'ve got you covered</string>
     <string name="on_boarding_2">Get access to detailed resources and blogs curated by our very own committee</string>
     <string name="on_boarding_3">Find the latest updates of all the upcoming ISTE-VIT events and grow and learn along with us</string>
+
+    <string name="UPCOMING_EVENT">upcoming</string>
+    <string name="COMPLETED_EVENT">completed</string>
 </resources>

@@ -1,24 +1,20 @@
 package `in`.istevit.app.adapters
 
-import `in`.istevit.app.R
-import `in`.istevit.app.data.model.AnnouncementsData
-import `in`.istevit.app.data.model.CarouselData
+import `in`.istevit.app.data.model.home.HomeAnnouncementsData
 import `in`.istevit.app.databinding.SingleAnnouncementsItemBinding
 import `in`.istevit.app.ui.blogs.BlogDetailsActivity
+import `in`.istevit.app.ui.events.EventDetailsActivity
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.databinding.BindingAdapter
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class AnnouncementsAdapter(val context: Context): ListAdapter<AnnouncementsData, AnnouncementsAdapter.ItemViewHolder>(DiffUtil()) {
+class AnnouncementsAdapter(val context: Context): ListAdapter<HomeAnnouncementsData, AnnouncementsAdapter.ItemViewHolder>(DiffUtil()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val binding = SingleAnnouncementsItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -30,18 +26,18 @@ class AnnouncementsAdapter(val context: Context): ListAdapter<AnnouncementsData,
         holder.bind(item)
     }
 
-    class DiffUtil: androidx.recyclerview.widget.DiffUtil.ItemCallback<AnnouncementsData>() {
-        override fun areItemsTheSame(oldItem: AnnouncementsData, newItem: AnnouncementsData): Boolean {
+    class DiffUtil: androidx.recyclerview.widget.DiffUtil.ItemCallback<HomeAnnouncementsData>() {
+        override fun areItemsTheSame(oldItem: HomeAnnouncementsData, newItem: HomeAnnouncementsData): Boolean {
             return oldItem.title == newItem.title
         }
 
-        override fun areContentsTheSame(oldItem: AnnouncementsData, newItem: AnnouncementsData): Boolean {
+        override fun areContentsTheSame(oldItem: HomeAnnouncementsData, newItem: HomeAnnouncementsData): Boolean {
             return oldItem == newItem
         }
     }
 
     inner class ItemViewHolder(private val binding: SingleAnnouncementsItemBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: AnnouncementsData){
+        fun bind(item: HomeAnnouncementsData){
             binding.apply {
                 listItem = item
                 announcementsRoot.setOnClickListener {
@@ -51,6 +47,20 @@ class AnnouncementsAdapter(val context: Context): ListAdapter<AnnouncementsData,
                         mIntent.putExtra("blogDescription", item.description)
                         mIntent.putExtra("blogAuthor", item.author)
                         mIntent.putExtra("blogImage", item.image)
+                        mIntent.putExtra("blogLink", item.link)
+                        mIntent.putExtra("blogDate", item.date)
+                        announcementsRoot.context.startActivity(mIntent)
+                    } else if(item.type == "event"){
+                        val mIntent = Intent(announcementsRoot.context, EventDetailsActivity::class.java)
+                        mIntent.putExtra("eventTitle", item.title)
+                        mIntent.putExtra("eventDescription", item.description)
+                        mIntent.putExtra("eventImage", item.image)
+                        mIntent.putExtra("eventSpeaker", item.author)
+                        mIntent.putExtra("eventLink", item.link)
+                        mIntent.putExtra("eventDate", item.date)
+                        mIntent.putExtra("eventTime", item.time)
+                        mIntent.putExtra("eventPlatform", item.platform)
+                        mIntent.putExtra("eventCategory", item.category)
                         announcementsRoot.context.startActivity(mIntent)
                     }
                 }

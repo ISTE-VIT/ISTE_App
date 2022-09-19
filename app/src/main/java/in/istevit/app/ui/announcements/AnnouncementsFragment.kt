@@ -2,14 +2,14 @@ package `in`.istevit.app.ui.announcements
 
 import `in`.istevit.app.adapters.AnnouncementsAdapter
 import `in`.istevit.app.adapters.CarouselAdapter
-import `in`.istevit.app.data.model.AnnouncementsData
-import `in`.istevit.app.data.model.CarouselData
+import `in`.istevit.app.data.model.home.HomeCarouselData
 import `in`.istevit.app.databinding.FragmentAnnouncementsBinding
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
@@ -19,8 +19,8 @@ class AnnouncementsFragment : Fragment() {
     lateinit var binding: FragmentAnnouncementsBinding
     private lateinit var carouselAdapter: CarouselAdapter
     private lateinit var announcementsAdapter: AnnouncementsAdapter
-    private var carouselList = mutableListOf<CarouselData>()
-    private var announcementsList = mutableListOf<AnnouncementsData>()
+    private var carouselList = mutableListOf<HomeCarouselData>()
+    lateinit var viewModel: AnnouncementsViewModel
     private lateinit var carouselLayoutManager: LinearLayoutManager
     private lateinit var announcementsLayoutManager: LinearLayoutManager
 
@@ -38,6 +38,19 @@ class AnnouncementsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        viewModel = ViewModelProvider(this)[AnnouncementsViewModel::class.java]
+        viewModel.fetchAnnouncements()
+        viewModel.fetchCarouselData()
+
+        viewModel.announcementsList.observe(viewLifecycleOwner) {
+            announcementsAdapter.submitList(it.toMutableList())
+        }
+
+        viewModel.carouselList.observe(viewLifecycleOwner) {
+            carouselList = it.toMutableList()
+            carouselAdapter.submitList(carouselList)
+        }
 
         carouselAdapter = CarouselAdapter(requireContext())
         val snapHelper = PagerSnapHelper()
@@ -65,37 +78,6 @@ class AnnouncementsFragment : Fragment() {
                 }
             }
         })
-
-        carouselList.add(
-            CarouselData(
-                "https://www.gettyimages.com/gi-resources/images/500px/983703508.jpg",
-                "Test 1",
-                ""
-            )
-        )
-        carouselList.add(
-            CarouselData(
-                "https://media.istockphoto.com/photos/nahargarh-fort-picture-id635726330?k=20&m=635726330&s=612x612&w=0&h=eiUeGWk-Lufy7z_zb_x4BaEgRDb82VnPkhsTVDQHn0I=",
-                "Test 2",
-                ""
-            )
-        )
-        carouselList.add(
-            CarouselData(
-                "https://www.holidify.com/images/bgImages/MUMBAI.jpg",
-                "Test-3",
-                ""
-            )
-        )
-
-        carouselAdapter.submitList(carouselList.toMutableList())
-
-        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "vandit", "", "blog"))
-        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "shyam", "", "blog"))
-        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "sahith", "", "blog"))
-        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "dhanush", "", "blog"))
-        announcementsList.add(AnnouncementsData("https://www.holidify.com/images/bgImages/MUMBAI.jpg", "Test 23", "this is an announcement", "manan", "", "blog"))
-        announcementsAdapter.submitList(announcementsList)
     }
 
     fun runAutoScrollingCarousel(){
