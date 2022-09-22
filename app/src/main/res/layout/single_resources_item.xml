@@ -23,12 +23,14 @@
 
             <TextView
                 android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:text="MACHINE LEARNING"
                 android:textColor="@color/white"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:padding="8dp"
+                android:gravity="center"
+                android:fontWeight="700"
                 app:fontFamily="@font/roboto"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toEndOf="parent"

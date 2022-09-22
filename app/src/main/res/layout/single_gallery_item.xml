@@ -8,19 +8,19 @@
             type="in.istevit.app.data.model.GalleryModel" />
     </data>
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:paddingHorizontal="8dp"-->
-<!--        android:paddingTop="8dp"-->
-<!--        loadGalleryImage="@{galleryItem.image}" />-->
-
-    <com.github.chrisbanes.photoview.PhotoView
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="8dp"
         android:paddingTop="8dp"
-        loadGalleryImage="@{galleryItem.image}"/>
+        loadGalleryImage="@{galleryItem.image}" />
+
+<!--    <com.github.chrisbanes.photoview.PhotoView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingHorizontal="8dp"-->
+<!--        android:paddingTop="8dp"-->
+<!--        loadGalleryImage="@{galleryItem.image}"/>-->
 </layout>

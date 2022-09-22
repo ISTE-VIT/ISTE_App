@@ -28,6 +28,9 @@ class AnnouncementsFragment : Fragment() {
     private var timerTask: TimerTask? = null
     private var position = 0
 
+    private var announcementsLoaded = false;
+    private var carouselLoaded = false;
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -45,11 +48,15 @@ class AnnouncementsFragment : Fragment() {
 
         viewModel.announcementsList.observe(viewLifecycleOwner) {
             announcementsAdapter.submitList(it.toMutableList())
+            announcementsLoaded = true
+            isAnnouncementsLoaded()
         }
 
         viewModel.carouselList.observe(viewLifecycleOwner) {
             carouselList = it.toMutableList()
             carouselAdapter.submitList(carouselList)
+            carouselLoaded = true
+            isAnnouncementsLoaded()
         }
 
         carouselAdapter = CarouselAdapter(requireContext())
@@ -108,6 +115,13 @@ class AnnouncementsFragment : Fragment() {
             timer = null
             timerTask = null
             position = carouselLayoutManager.findFirstCompletelyVisibleItemPosition()
+        }
+    }
+
+    private fun isAnnouncementsLoaded(){
+        if(announcementsLoaded && carouselLoaded){
+            binding.progressCircular.visibility = View.GONE
+            binding.announcementsTV.visibility = View.VISIBLE
         }
     }
 }

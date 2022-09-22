@@ -29,6 +29,8 @@ class BlogDetailsActivity : AppCompatActivity(), ReadCallback {
         binding.apply {
             setSupportActionBar(toolbar)
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_back)
+
             binding.blog = BlogDetailsModel(
                 image = intent.getStringExtra("blogImage")!!,
                 title = intent.getStringExtra("blogTitle")!!,

@@ -25,14 +25,4 @@
         android:name="in.istevit.app.ui.gallery.GalleryFragment"
         android:label="fragment_gallery"
         tools:layout="@layout/fragment_gallery" />
-    <fragment
-        android:id="@+id/projectsFragment"
-        android:name="in.istevit.app.ui.projects.ProjectsFragment"
-        android:label="fragment_projects"
-        tools:layout="@layout/fragment_projects" />
-    <fragment
-        android:id="@+id/resourcesFragment"
-        android:name="in.istevit.app.ResourcesFragment"
-        android:label="fragment_resources"
-        tools:layout="@layout/fragment_resources" />
 </navigation>

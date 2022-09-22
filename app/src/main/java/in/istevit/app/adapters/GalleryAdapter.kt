@@ -4,6 +4,7 @@ import `in`.istevit.app.data.model.GalleryModel
 import `in`.istevit.app.databinding.SingleGalleryItemBinding
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -39,7 +40,7 @@ class GalleryAdapter: ListAdapter<GalleryModel, GalleryAdapter.ItemViewHolder>(D
 }
 
 @BindingAdapter("loadGalleryImage")
-fun loadGalleryImage(item_imageView: PhotoView, url: String){
+fun loadGalleryImage(item_imageView: ImageView, url: String){
     Glide.with(item_imageView)
         .load(url)
         .into(item_imageView)

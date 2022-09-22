@@ -50,9 +50,17 @@ class BlogFragment : Fragment(), BlogOnCLickCallback{
             run {
                 if(chId != checkedId){
                     when(checkedId) {
-                        R.id.chip_all -> blogAdapter.submitList(blogsList)
+                        R.id.chip_all -> {
+                            blogAdapter.submitList(blogsList)
+                            binding.animationView.visibility = View.GONE
+                        }
                         R.id.chip_recents -> {
                             var temp = blogsList.filter { it.filter == "recents" }
+                            if(temp.isEmpty()){
+                                binding.animationView.visibility = View.VISIBLE
+                            } else {
+                                binding.animationView.visibility = View.GONE
+                            }
                             blogAdapter.submitList(temp.toMutableList())
                         }
                     }

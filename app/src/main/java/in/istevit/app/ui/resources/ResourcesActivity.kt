@@ -1,34 +1,26 @@
-package `in`.istevit.app
+package `in`.istevit.app.ui.resources
 
+import `in`.istevit.app.R
 import `in`.istevit.app.adapters.ResourcesAdapter
 import `in`.istevit.app.data.model.ResourcesData
-import `in`.istevit.app.databinding.FragmentResourcesBinding
+import `in`.istevit.app.databinding.ActivityResourcesBinding
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 
-class ResourcesFragment : Fragment() {
-    lateinit var binding: FragmentResourcesBinding
+class ResourcesActivity : AppCompatActivity() {
+    lateinit var binding: ActivityResourcesBinding
     lateinit var adapter: ResourcesAdapter
     private var resourcesList = mutableListOf<ResourcesData>()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentResourcesBinding.inflate(layoutInflater)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityResourcesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         adapter = ResourcesAdapter()
         binding.recyclerView.adapter = adapter
-        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
 
         resourcesList.add(ResourcesData(R.drawable.ic_gallery, "Machine Learning"))
         resourcesList.add(ResourcesData(R.drawable.ic_gallery, "App Dev"))

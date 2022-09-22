@@ -52,18 +52,36 @@ class EventFragment : Fragment(), EventOnClickCallback{
             run {
                 if(chId != checkedId){
                     when(checkedId) {
-                        R.id.chip_all -> eventAdapter.submitList(eventsList)
+                        R.id.chip_all -> {
+                            eventAdapter.submitList(eventsList)
+                            binding.animationView.visibility = View.GONE
+                        }
                         R.id.chip_ongoing -> {
                             var temp = eventsList.filter { it.filter == "ongoing" }
                             eventAdapter.submitList(temp.toMutableList())
+                            if(temp.isEmpty()){
+                                binding.animationView.visibility = View.VISIBLE
+                            } else {
+                                binding.animationView.visibility = View.GONE
+                            }
                         }
                         R.id.chip_completed -> {
                             var temp = eventsList.filter { it.filter == "completed" }
                             eventAdapter.submitList(temp.toMutableList())
+                            if(temp.isEmpty()){
+                                binding.animationView.visibility = View.VISIBLE
+                            } else {
+                                binding.animationView.visibility = View.GONE
+                            }
                         }
                         R.id.chip_upcoming -> {
                             var temp = eventsList.filter { it.filter == "upcoming" }
                             eventAdapter.submitList(temp.toMutableList())
+                            if(temp.isEmpty()){
+                                binding.animationView.visibility = View.VISIBLE
+                            } else {
+                                binding.animationView.visibility = View.GONE
+                            }
                         }
                     }
                     chId = checkedId
