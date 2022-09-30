@@ -17,6 +17,9 @@
         android:theme="@style/Theme.ISTEVIT"
         tools:targetApi="31">
         <activity
+            android:name=".ui.resources.ResourcesDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.resources.ResourcesActivity"
             android:exported="false" />
         <activity

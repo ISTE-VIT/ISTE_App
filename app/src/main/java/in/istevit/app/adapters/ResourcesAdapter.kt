@@ -1,7 +1,9 @@
 package `in`.istevit.app.adapters
 
-import `in`.istevit.app.data.model.ResourcesData
+import `in`.istevit.app.data.model.resources.ResourcesData
 import `in`.istevit.app.databinding.SingleResourcesItemBinding
+import `in`.istevit.app.ui.resources.ResourcesDetailActivity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -33,6 +35,9 @@ class ResourcesAdapter: ListAdapter<ResourcesData, ResourcesAdapter.ItemViewHold
             binding.apply {
                 imageView.setImageResource(item.image)
                 title.text = item.title
+                constrainLayout.setOnClickListener {
+                    constrainLayout.context.startActivity(Intent(constrainLayout.context, ResourcesDetailActivity::class.java).putExtra("id", item.id))
+                }
             }
         }
     }

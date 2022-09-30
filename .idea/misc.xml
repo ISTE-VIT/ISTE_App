@@ -19,10 +19,11 @@
         <entry key="app/src/main/res/layout/activity_on_boarding.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_projects.xml" value="0.21912078857421877" />
         <entry key="app/src/main/res/layout/activity_resources.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_resources_detail.xml" value="0.332264355276067" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.24331766764322918" />
         <entry key="app/src/main/res/layout/activity_webview.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/bottom_sheet.xml" value="0.1634963768115942" />
-        <entry key="app/src/main/res/layout/bottom_sheet_options.xml" value="0.23043363267096947" />
+        <entry key="app/src/main/res/layout/bottom_sheet_options.xml" value="0.37119095046798906" />
         <entry key="app/src/main/res/layout/bottom_sheet_webview.xml" value="0.3046890037647192" />
         <entry key="app/src/main/res/layout/events_single_item.xml" value="0.3324844139209692" />
         <entry key="app/src/main/res/layout/fragment_announcements.xml" value="0.22675120035807284" />
@@ -42,6 +43,8 @@
         <entry key="app/src/main/res/layout/single_flagship_item.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/single_gallery_item.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/layout/single_project_item.xml" value="0.1634963768115942" />
+        <entry key="app/src/main/res/layout/single_resources_detail_item.xml" value="0.2094192283740942" />
+        <entry key="app/src/main/res/layout/single_resources_inner_item.xml" value="0.2973037498584693" />
         <entry key="app/src/main/res/layout/single_resources_item.xml" value="0.2731338279834692" />
         <entry key="app/src/main/res/layout/single_tracks_item.xml" value="0.1634963768115942" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.28229166666666666" />

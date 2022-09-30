@@ -72,12 +72,7 @@ class BlogFragment : Fragment(), BlogOnCLickCallback{
 
     override fun onClick(item: BlogDetailsModel) {
         val mIntent = Intent(requireContext(), BlogDetailsActivity::class.java)
-        mIntent.putExtra("blogTitle", item.title)
-        mIntent.putExtra("blogDescription", item.description)
-        mIntent.putExtra("blogAuthor", item.writer)
-        mIntent.putExtra("blogImage", item.image)
-        mIntent.putExtra("blogLink", item.link)
-        mIntent.putExtra("blogDate", item.date)
+        mIntent.putExtra("blogItem", item)
         startActivity(mIntent)
     }
 }

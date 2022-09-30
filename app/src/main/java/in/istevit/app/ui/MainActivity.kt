@@ -110,6 +110,38 @@ class MainActivity : AppCompatActivity() {
                             bottomSheetDialog.dismiss()
                         }
 
+                        bottomSheetDialog.findViewById<ImageView>(R.id.linkedinBTN)?.setOnClickListener {
+                            try {
+                                packageManager.getPackageInfo("com.linkedin.android", 0)
+                                val linkedinIntent = Intent(Intent.ACTION_VIEW, Uri.parse(Constants.LINKEDIN_URL))
+                                startActivity(linkedinIntent)
+                            } catch (e: Exception) {
+                                startActivity(
+                                    Intent(
+                                        Intent.ACTION_VIEW,
+                                        Uri.parse(Constants.LINKEDIN_URL)
+                                    )
+                                )
+                            }
+                            bottomSheetDialog.dismiss()
+                        }
+
+                        bottomSheetDialog.findViewById<ImageView>(R.id.githubBTN)?.setOnClickListener {
+                            try {
+                                packageManager.getPackageInfo("com.github.android", 0)
+                                val githubIntent = Intent(Intent.ACTION_VIEW, Uri.parse(Constants.GITHUB_URL))
+                                startActivity(githubIntent)
+                            } catch (e: Exception) {
+                                startActivity(
+                                    Intent(
+                                        Intent.ACTION_VIEW,
+                                        Uri.parse(Constants.GITHUB_URL)
+                                    )
+                                )
+                            }
+                            bottomSheetDialog.dismiss()
+                        }
+
                         bottomSheetDialog.findViewById<ImageView>(R.id.youtubeBTN)?.setOnClickListener {
                             try {
                                 val youtubeIntent = Intent(Intent.ACTION_VIEW)

@@ -50,7 +50,7 @@ class EventsAdapter (val context: Context): ListAdapter<EventDetailsModel, Event
             binding.apply {
                 event = item
                 callback = eventOnClickCallback
-                if(item.category == "completed"){
+                if(item.filter == "completed"){
                     timeTV.visibility = View.GONE
                     timeText.visibility = View.GONE
                 }

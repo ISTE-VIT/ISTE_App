@@ -4,13 +4,11 @@ import `in`.istevit.app.R
 import `in`.istevit.app.data.model.BlogDetailsModel
 import `in`.istevit.app.databinding.ActivityBlogDetailsBinding
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.webkit.WebView
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
@@ -31,20 +29,13 @@ class BlogDetailsActivity : AppCompatActivity(), ReadCallback {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
             supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_back)
 
-            binding.blog = BlogDetailsModel(
-                image = intent.getStringExtra("blogImage")!!,
-                title = intent.getStringExtra("blogTitle")!!,
-                writer = intent.getStringExtra("blogAuthor")!!,
-                description = intent.getStringExtra("blogDescription")!!,
-                link = intent.getStringExtra("blogLink")!!,
-                date = intent.getStringExtra("blogDate")!!
-            )
+            binding.blog = intent.getSerializableExtra("blogItem") as BlogDetailsModel?
             binding.callback = this@BlogDetailsActivity
         }
 
         bottomSheetDialog = BottomSheetDialog(this)
         view = layoutInflater.inflate(R.layout.bottom_sheet_webview, null)
-        view.findViewById<WebView>(R.id.webView_bottom_sheet).loadUrl(intent.getStringExtra("blogLink")!!)
+        view.findViewById<WebView>(R.id.webView_bottom_sheet).loadUrl(binding.blog?.link!!)
         view.findViewById<ImageView>(R.id.bottom_sheet_webview_close).setOnClickListener { bottomSheetDialog.dismiss() }
         view.findViewById<ImageView>(R.id.bottom_sheet_webview_reload).setOnClickListener { view.findViewById<WebView>(R.id.webView_bottom_sheet).reload() }
     }

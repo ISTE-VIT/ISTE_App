@@ -3,11 +3,10 @@ package `in`.istevit.app.ui.events
 import `in`.istevit.app.R
 import `in`.istevit.app.data.model.EventDetailsModel
 import `in`.istevit.app.databinding.ActivityEventDetailsBinding
-import `in`.istevit.app.util.channelID
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
+import `in`.istevit.app.util.NotificationService
+import android.app.*
 import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.MenuItem
@@ -33,34 +32,48 @@ class EventDetailsActivity : AppCompatActivity() {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
             supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_back)
 
-            event = EventDetailsModel(
-                image = intent.getStringExtra("eventImage")!!,
-                title = intent.getStringExtra("eventTitle")!!,
-                speaker = intent.getStringExtra("eventSpeaker")!!,
-                description = intent.getStringExtra("eventDescription")!!,
-                link = intent.getStringExtra("eventLink")!!,
-                date = intent.getStringExtra("eventDate")!!,
-                time = intent.getStringExtra("eventTime")!!,
-                platform = intent.getStringExtra("eventPlatform")!!,
-                category = intent.getStringExtra("eventCategory")!!
-            )
+            event = intent.getSerializableExtra("eventItem") as EventDetailsModel?
 
-            if(intent.getStringExtra("eventCategory")!! == "completed"){
+//            when (event?.filter) {
+//                "completed" -> {
+//                    timeTitle.visibility = View.GONE
+//                    timeTV.visibility = View.GONE
+//                    button.text = "Watch Now!"
+//                }
+//                "upcoming" -> {
+//                    timeTitle.visibility = View.VISIBLE
+//                    timeTV.visibility = View.VISIBLE
+//                    button.text = "RSVP"
+////                    scheduleNotification()
+//                }
+//                "ongoing" -> {
+//                    timeTitle.visibility = View.VISIBLE
+//                    timeTV.visibility = View.VISIBLE
+//                    button.text = "Join In!"
+//                }
+//            }
+
+            if(event?.link != null){
                 timeTitle.visibility = View.GONE
                 timeTV.visibility = View.GONE
-                rsvpBTN.visibility = View.GONE
-                watchBTN.visibility = View.VISIBLE
-            }
-
-            rsvpBTN.setOnClickListener {
-                scheduleNotification()
+                button.text = "Watch Now!"
             }
         }
     }
 
     private fun scheduleNotification() {
-        TODO("Not yet implemented")
+        val intent = Intent(applicationContext, NotificationService::class.java)
+        val title = binding.event?.title
+        val message = "Test Message"
+        intent.putExtra("titleExtra", title)
+        intent.putExtra("messageExtra", message)
+        val pendingIntent = PendingIntent.getBroadcast(applicationContext, 1, intent, PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
+        val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
+//        val time = getTime()
     }
+
+//    private fun getTime(): Long{
+//    }
 
     private fun createChannels(channelId: String, channelName: String, channelDescription: String, importance: Int) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

@@ -92,15 +92,7 @@ class EventFragment : Fragment(), EventOnClickCallback{
 
     override fun onClick(item: EventDetailsModel) {
         val mIntent = Intent(requireContext(), EventDetailsActivity::class.java)
-        mIntent.putExtra("eventTitle", item.title)
-        mIntent.putExtra("eventDescription", item.description)
-        mIntent.putExtra("eventImage", item.image)
-        mIntent.putExtra("eventSpeaker", item.speaker)
-        mIntent.putExtra("eventLink", item.link)
-        mIntent.putExtra("eventDate", item.date)
-        mIntent.putExtra("eventTime", item.time)
-        mIntent.putExtra("eventPlatform", item.platform)
-        mIntent.putExtra("eventCategory", item.category)
+        mIntent.putExtra("eventItem", item)
         startActivity(mIntent)
     }
 }

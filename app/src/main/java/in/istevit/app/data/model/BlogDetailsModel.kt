@@ -1,5 +1,7 @@
 package `in`.istevit.app.data.model
 
+import java.io.Serializable
+
 data class BlogDetailsModel(
     val _id: String? = null,
     val date: String,
@@ -9,4 +11,4 @@ data class BlogDetailsModel(
     val link: String,
     val title: String,
     val writer: String
-)
+): Serializable

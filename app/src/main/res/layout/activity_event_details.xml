@@ -204,7 +204,7 @@
         </androidx.core.widget.NestedScrollView>
 
         <Button
-            android:id="@+id/rsvpBTN"
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="32dp"
@@ -212,18 +212,6 @@
             android:backgroundTint="@color/blue"
             android:textColor="@color/white"
             android:text="RSVP"
-            android:layout_gravity="bottom"/>
-
-        <Button
-            android:id="@+id/watchBTN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="32dp"
-            android:padding="16dp"
-            android:visibility="gone"
-            android:backgroundTint="@color/blue"
-            android:textColor="@color/white"
-            android:text="Watch Now!"
             android:layout_gravity="bottom"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

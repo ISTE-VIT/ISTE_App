@@ -1,5 +1,7 @@
 package `in`.istevit.app.adapters
 
+import `in`.istevit.app.data.model.BlogDetailsModel
+import `in`.istevit.app.data.model.EventDetailsModel
 import `in`.istevit.app.data.model.home.HomeAnnouncementsData
 import `in`.istevit.app.databinding.SingleAnnouncementsItemBinding
 import `in`.istevit.app.ui.blogs.BlogDetailsActivity
@@ -43,24 +45,13 @@ class AnnouncementsAdapter(val context: Context): ListAdapter<HomeAnnouncementsD
                 announcementsRoot.setOnClickListener {
                     if(item.type == "blog"){
                         val mIntent = Intent(announcementsRoot.context, BlogDetailsActivity::class.java)
-                        mIntent.putExtra("blogTitle", item.title)
-                        mIntent.putExtra("blogDescription", item.description)
-                        mIntent.putExtra("blogAuthor", item.author)
-                        mIntent.putExtra("blogImage", item.image)
-                        mIntent.putExtra("blogLink", item.link)
-                        mIntent.putExtra("blogDate", item.date)
+                        val data = BlogDetailsModel(title = item.title, description = item.description, writer = item.author, image = item.image, link = item.link, date = item.date)
+                        mIntent.putExtra("blogItem", data)
                         announcementsRoot.context.startActivity(mIntent)
                     } else if(item.type == "event"){
                         val mIntent = Intent(announcementsRoot.context, EventDetailsActivity::class.java)
-                        mIntent.putExtra("eventTitle", item.title)
-                        mIntent.putExtra("eventDescription", item.description)
-                        mIntent.putExtra("eventImage", item.image)
-                        mIntent.putExtra("eventSpeaker", item.author)
-                        mIntent.putExtra("eventLink", item.link)
-                        mIntent.putExtra("eventDate", item.date)
-                        mIntent.putExtra("eventTime", item.time)
-                        mIntent.putExtra("eventPlatform", item.platform)
-                        mIntent.putExtra("eventCategory", item.category)
+                        val data = EventDetailsModel(title = item.title, description = item.description, image = item.image, speaker = item.author, link = item.link, date = item.date, time = item.time, platform = item.platform, category = item.category)
+                        mIntent.putExtra("eventItem", data)
                         announcementsRoot.context.startActivity(mIntent)
                     }
                 }

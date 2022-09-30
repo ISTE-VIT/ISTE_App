@@ -108,6 +108,27 @@ class AnnouncementsFragment : Fragment() {
         }
     }
 
+//    override fun onSaveInstanceState(outState: Bundle) {
+//        super.onSaveInstanceState(outState)
+//
+//        val gson = Gson()
+//        val json = gson.toJson(carouselList)
+//        outState.putString("Carousel_data", json)
+//    }
+
+//    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+//        super.onViewStateRestored(savedInstanceState)
+//
+//        if(savedInstanceState != null){
+//            val json = savedInstanceState.getString("Carousel_data")
+//            if(json!!.isNotEmpty()){
+//                val gson = Gson()
+//                val cList = gson.fromJson<String>(json, HomeCarouselData::class.java)
+//                Log.d("TAG", cList.toString())
+//            }
+//        }
+//    }
+
     fun stopAutoScrollCarousel(){
         if (timer != null && timerTask != null) {
             timerTask!!.cancel()
@@ -120,8 +141,12 @@ class AnnouncementsFragment : Fragment() {
 
     private fun isAnnouncementsLoaded(){
         if(announcementsLoaded && carouselLoaded){
-            binding.progressCircular.visibility = View.GONE
-            binding.announcementsTV.visibility = View.VISIBLE
+            binding.apply {
+                progressCircular.visibility = View.GONE
+                announcementsTV.visibility = View.VISIBLE
+                announcementsRecview.visibility = View.VISIBLE
+                carouselRecview.visibility = View.VISIBLE
+            }
         }
     }
 }
