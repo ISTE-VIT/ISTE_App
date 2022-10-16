@@ -2,6 +2,8 @@ package `in`.istevit.app.adapters
 
 import `in`.istevit.app.data.model.resources.OpenGraphResult
 import `in`.istevit.app.databinding.SingleResourcesInnerItemBinding
+import android.content.Intent
+import android.net.Uri
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -35,6 +37,9 @@ class ResourcesLinksAdapter: ListAdapter<OpenGraphResult, ResourcesLinksAdapter.
         fun bind(item: OpenGraphResult){
             binding.apply {
                 ogpItem = item
+                title.setOnClickListener {
+                    title.context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(item.url)))
+                }
                 Glide.with(imageView)
                     .load(item.image)
                     .centerCrop()
