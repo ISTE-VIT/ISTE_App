@@ -6,7 +6,7 @@
     <data>
         <variable
             name="resLinksItem"
-            type="in.istevit.app.data.model.resources.ResourcesLinksData" />
+            type="in.istevit.app.data.model.resources.ResourcesOgpData" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

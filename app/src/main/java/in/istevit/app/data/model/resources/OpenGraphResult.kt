@@ -1,4 +1,4 @@
-package `in`.istevit.app.data.model
+package `in`.istevit.app.data.model.resources
 
 data class OpenGraphResult(
     var title: String? = null,

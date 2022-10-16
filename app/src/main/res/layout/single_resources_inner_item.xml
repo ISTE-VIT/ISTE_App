@@ -2,6 +2,12 @@
 <layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <data>
+        <variable
+            name="ogpItem"
+            type="in.istevit.app.data.model.resources.OpenGraphResult" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -12,7 +18,6 @@
             android:id="@+id/imageView"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,6 +30,7 @@
             android:paddingHorizontal="8dp"
             android:textColor="@color/blue"
             android:textSize="12sp"
+            android:text="@{ogpItem.title}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
@@ -38,6 +44,7 @@
             android:paddingHorizontal="8dp"
             android:textColor="@color/white"
             android:textSize="12sp"
+            android:text="@{ogpItem.description}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/title" />

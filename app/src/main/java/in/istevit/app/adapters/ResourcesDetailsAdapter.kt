@@ -1,6 +1,6 @@
 package `in`.istevit.app.adapters
 
-import `in`.istevit.app.data.model.resources.ResourcesLinksData
+import `in`.istevit.app.data.model.resources.ResourcesOgpData
 import `in`.istevit.app.databinding.SingleResourcesDetailItemBinding
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 
-class ResourcesDetailsAdapter:ListAdapter<ResourcesLinksData, ResourcesDetailsAdapter.ItemViewHolder>(DiffUtil()) {
+class ResourcesDetailsAdapter:ListAdapter<ResourcesOgpData, ResourcesDetailsAdapter.ItemViewHolder>(DiffUtil()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val binding: SingleResourcesDetailItemBinding = SingleResourcesDetailItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ItemViewHolder(binding)
@@ -20,18 +20,18 @@ class ResourcesDetailsAdapter:ListAdapter<ResourcesLinksData, ResourcesDetailsAd
         holder.bind(item)
     }
 
-    class DiffUtil: androidx.recyclerview.widget.DiffUtil.ItemCallback<ResourcesLinksData>() {
-        override fun areItemsTheSame(oldItem: ResourcesLinksData, newItem: ResourcesLinksData): Boolean {
+    class DiffUtil: androidx.recyclerview.widget.DiffUtil.ItemCallback<ResourcesOgpData>() {
+        override fun areItemsTheSame(oldItem: ResourcesOgpData, newItem: ResourcesOgpData): Boolean {
             return oldItem.topic == newItem.topic
         }
 
-        override fun areContentsTheSame(oldItem: ResourcesLinksData, newItem: ResourcesLinksData): Boolean {
+        override fun areContentsTheSame(oldItem: ResourcesOgpData, newItem: ResourcesOgpData): Boolean {
             return oldItem == newItem
         }
     }
 
     inner class ItemViewHolder(private val binding: SingleResourcesDetailItemBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(item: ResourcesLinksData){
+        fun bind(item: ResourcesOgpData){
             binding.apply {
                 resLinksItem = item
 
