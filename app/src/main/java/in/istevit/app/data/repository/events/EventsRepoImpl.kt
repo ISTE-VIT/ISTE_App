@@ -1,14 +1,14 @@
 package `in`.istevit.app.data.repository.events
 
 import `in`.istevit.app.data.model.EventDetailsModel
-import `in`.istevit.app.data.network.service.RetrofitService
+import `in`.istevit.app.data.network.service.CommonNetworkService
 import android.util.Log
 import java.net.UnknownHostException
+import javax.inject.Inject
 
 private const val TAG = "EventsRepoImpl"
 
-class EventsRepoImpl {
-    private val service = RetrofitService.getRetroInstance().create(EventsRepo::class.java)
+class EventsRepoImpl @Inject constructor(private val service: CommonNetworkService){
 
     suspend fun fetchEventsData(): Result<List<EventDetailsModel>>{
         return try {

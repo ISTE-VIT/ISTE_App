@@ -1,13 +1,13 @@
 package `in`.istevit.app.data.repository.projects
 
 import `in`.istevit.app.data.model.ProjectsModel
-import `in`.istevit.app.data.network.service.RetrofitService
+import `in`.istevit.app.data.network.service.CommonNetworkService
 import android.util.Log
 import java.net.UnknownHostException
+import javax.inject.Inject
 
 const val TAG = "ProjectsRepoImpl"
-class ProjectsRepoImpl {
-    private val service = RetrofitService.getRetroInstance().create(ProjectsRepo::class.java)
+class ProjectsRepoImpl @Inject constructor(private val service: CommonNetworkService){
 
     suspend fun getProjectsData(): Result<List<ProjectsModel>>{
         return try {

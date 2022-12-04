@@ -1,30 +1,30 @@
 package `in`.istevit.app.data.repository.gallery
 
+import `in`.istevit.app.data.database.ImagesDao
 import `in`.istevit.app.data.model.GalleryModel
-import `in`.istevit.app.data.network.service.RetrofitService
+import `in`.istevit.app.data.network.service.CommonNetworkService
 import android.util.Log
+import androidx.lifecycle.LiveData
 import java.net.UnknownHostException
+import javax.inject.Inject
 
 private const val TAG = "GalleryRepoImpl"
 
-class GalleryRepoImpl {
-    private val service = RetrofitService.getRetroInstance().create(GalleryRepo::class.java)
+class GalleryRepoImpl @Inject constructor(private val dao: ImagesDao, private val service: CommonNetworkService) {
 
-    suspend fun fetchGalleryData(): Result<List<GalleryModel>>{
-        return try {
+    suspend fun fetchGalleryData(): LiveData<List<GalleryModel>>{
+        try {
             val response = service.getGallery()
             if (response.isSuccessful) {
-                Result.success(response.body()!!)
+                dao.insertAll(response.body()!!)
             } else {
                 Log.d(TAG, response.message())
-                Result.failure(Exception(response.errorBody().toString()))
             }
         } catch (e: UnknownHostException) {
             Log.e(TAG, e.stackTraceToString())
-            Result.failure(e)
         } catch (e: Exception){
             Log.e(TAG, e.stackTraceToString())
-            Result.failure(e)
         }
+        return dao.getAllImages()
     }
 }

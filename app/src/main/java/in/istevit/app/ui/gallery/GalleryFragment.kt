@@ -9,14 +9,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import kotlinx.coroutines.launch
 
 class GalleryFragment : Fragment() {
     lateinit var binding: FragmentGalleryBinding
     lateinit var galleryAdapter: GalleryAdapter
     lateinit var viewmodel: GalleryViewmodel
-    private var imageList = mutableListOf<GalleryModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,10 +29,11 @@ class GalleryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewmodel = ViewModelProvider(this)[GalleryViewmodel::class.java]
-        viewmodel.fetchGallery()
-        viewmodel.galleryList.observe(viewLifecycleOwner) {
-            galleryAdapter.submitList(it.toMutableList())
+        viewmodel = ViewModelProvider(requireActivity())[GalleryViewmodel::class.java]
+        lifecycleScope.launch {
+            viewmodel.fetchGallery().observe(viewLifecycleOwner) {
+                galleryAdapter.submitList(it.toMutableList())
+            }
         }
 
         galleryAdapter = GalleryAdapter()

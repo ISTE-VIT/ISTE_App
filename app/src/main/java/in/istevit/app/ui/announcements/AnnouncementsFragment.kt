@@ -42,23 +42,6 @@ class AnnouncementsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this)[AnnouncementsViewModel::class.java]
-        viewModel.fetchAnnouncements()
-        viewModel.fetchCarouselData()
-
-        viewModel.announcementsList.observe(viewLifecycleOwner) {
-            announcementsAdapter.submitList(it.toMutableList())
-            announcementsLoaded = true
-            isAnnouncementsLoaded()
-        }
-
-        viewModel.carouselList.observe(viewLifecycleOwner) {
-            carouselList = it.toMutableList()
-            carouselAdapter.submitList(carouselList)
-            carouselLoaded = true
-            isAnnouncementsLoaded()
-        }
-
         carouselAdapter = CarouselAdapter(requireContext())
         val snapHelper = PagerSnapHelper()
         snapHelper.attachToRecyclerView(binding.carouselRecview)
@@ -73,6 +56,31 @@ class AnnouncementsFragment : Fragment() {
         binding.announcementsRecview.adapter = announcementsAdapter
         announcementsLayoutManager = LinearLayoutManager(requireContext())
         binding.announcementsRecview.layoutManager = announcementsLayoutManager
+
+        viewModel = ViewModelProvider(requireActivity())[AnnouncementsViewModel::class.java]
+
+        if(viewModel.announcementsList.value != null && viewModel.carouselList.value != null){
+            announcementsAdapter.submitList(viewModel.announcementsList.value)
+            carouselList = viewModel.carouselList.value!!.toMutableList()
+            carouselAdapter.submitList(carouselList)
+            isAnnouncementsLoaded()
+        } else {
+            viewModel.fetchAnnouncements()
+            viewModel.fetchCarouselData()
+        }
+
+        viewModel.announcementsList.observe(viewLifecycleOwner) {
+            announcementsAdapter.submitList(it.toMutableList())
+            announcementsLoaded = true
+            isAnnouncementsLoaded()
+        }
+
+        viewModel.carouselList.observe(viewLifecycleOwner) {
+            carouselList = it.toMutableList()
+            carouselAdapter.submitList(carouselList)
+            carouselLoaded = true
+            isAnnouncementsLoaded()
+        }
 
         binding.carouselRecview.setOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {

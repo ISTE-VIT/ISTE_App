@@ -34,18 +34,27 @@ class EventFragment : Fragment(), EventOnClickCallback{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewmodel = ViewModelProvider(this)[EventsViewmodel::class.java]
-        viewmodel.fetchEvents()
-        viewmodel.eventsList.observe(viewLifecycleOwner) {
-            eventsList = it.toMutableList()
-            eventAdapter.submitList(eventsList)
-            binding.progressCircular.visibility = View.GONE
-        }
 
         eventAdapter = EventsAdapter(requireContext()).also { it.setCallback(this) }
         eventLayoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = eventAdapter
         binding.recyclerView.layoutManager = eventLayoutManager
+
+        viewmodel = ViewModelProvider(requireActivity())[EventsViewmodel::class.java]
+
+        if(viewmodel.eventsList.value != null){
+            eventsList = viewmodel.eventsList.value!!.toMutableList()
+            eventAdapter.submitList(eventsList)
+            binding.progressCircular.visibility = View.GONE
+        } else {
+            viewmodel.fetchEvents()
+        }
+
+        viewmodel.eventsList.observe(viewLifecycleOwner) {
+            eventsList = it.toMutableList()
+            eventAdapter.submitList(eventsList)
+            binding.progressCircular.visibility = View.GONE
+        }
 
         binding.chipGroup.setOnCheckedChangeListener{
                 _, checkedId ->

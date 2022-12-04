@@ -6,6 +6,7 @@ import `in`.istevit.app.data.model.BlogDetailsModel
 import `in`.istevit.app.databinding.FragmentBlogBinding
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,18 +33,25 @@ class BlogFragment : Fragment(), BlogOnCLickCallback{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewmodel = ViewModelProvider(this)[BlogsViewmodel::class.java]
-        viewmodel.fetchBlogs()
-        viewmodel.blogsList.observe(viewLifecycleOwner){
-            blogsList = it.toMutableList()
-            blogAdapter.submitList(blogsList)
-            binding.progressCircular.visibility = View.GONE
-        }
+        viewmodel = ViewModelProvider(requireActivity())[BlogsViewmodel::class.java]
 
         blogAdapter = BlogsAdapter(requireContext()).also { it.setCallback(this) }
         blogLayoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = blogAdapter
         binding.recyclerView.layoutManager = blogLayoutManager
+
+        if(viewmodel.blogsList.value == null){
+            viewmodel.fetchBlogs()
+            viewmodel.blogsList.observe(viewLifecycleOwner){
+                blogsList = it.toMutableList()
+                blogAdapter.submitList(blogsList)
+                binding.progressCircular.visibility = View.GONE
+            }
+        } else {
+            blogsList.addAll(viewmodel.blogsList.value!!)
+            blogAdapter.submitList(blogsList)
+            binding.progressCircular.visibility = View.GONE
+        }
 
         binding.chipGroup.setOnCheckedChangeListener{
                 _, checkedId ->

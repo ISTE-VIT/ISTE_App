@@ -5,10 +5,12 @@ import `in`.istevit.app.data.repository.events.EventsRepoImpl
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class EventsViewmodel: ViewModel() {
-    private val repo: EventsRepoImpl = EventsRepoImpl()
+@HiltViewModel
+class EventsViewmodel @Inject constructor(private val repo: EventsRepoImpl): ViewModel() {
     var eventsList = MutableLiveData<List<EventDetailsModel>>()
 
     fun fetchEvents(){

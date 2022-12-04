@@ -1,13 +1,13 @@
 package `in`.istevit.app.data.repository.flagship
 
 import `in`.istevit.app.data.model.FlagshipModel
-import `in`.istevit.app.data.network.service.RetrofitService
+import `in`.istevit.app.data.network.service.CommonNetworkService
 import android.util.Log
 import java.net.UnknownHostException
+import javax.inject.Inject
 
 private const val TAG = "FlagshipRepoImpl"
-class FlagshipRepoImpl {
-    private val service = RetrofitService.getRetroInstance().create(FlagshipRepo::class.java)
+class FlagshipRepoImpl @Inject constructor(private val service: CommonNetworkService){
 
     suspend fun fetchFlagshipData(): Result<List<FlagshipModel>>{
         return try {

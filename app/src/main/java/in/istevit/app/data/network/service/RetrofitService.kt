@@ -1,5 +1,6 @@
 package `in`.istevit.app.data.network.service
 
+import `in`.istevit.app.util.Constants
 import com.localebro.okhttpprofiler.OkHttpProfilerInterceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -13,7 +14,7 @@ class RetrofitService {
                 .build()
 
             return Retrofit.Builder()
-                .baseUrl("https://node-api-blond.vercel.app/")
+                .baseUrl(Constants.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

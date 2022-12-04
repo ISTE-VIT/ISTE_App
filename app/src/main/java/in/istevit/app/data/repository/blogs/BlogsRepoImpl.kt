@@ -1,14 +1,14 @@
 package `in`.istevit.app.data.repository.blogs
 
 import `in`.istevit.app.data.model.BlogDetailsModel
-import `in`.istevit.app.data.network.service.RetrofitService
+import `in`.istevit.app.data.network.service.CommonNetworkService
 import android.util.Log
 import java.net.UnknownHostException
+import javax.inject.Inject
 
 private const val TAG = "BlogsRepoImpl"
 
-class BlogsRepoImpl {
-    private val service = RetrofitService.getRetroInstance().create(BlogsRepo::class.java)
+class BlogsRepoImpl @Inject constructor(private val service: CommonNetworkService) {
 
     suspend fun fetchEventsData(): Result<List<BlogDetailsModel>>{
         return try {

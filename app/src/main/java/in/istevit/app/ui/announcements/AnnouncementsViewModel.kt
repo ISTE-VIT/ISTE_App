@@ -6,12 +6,14 @@ import `in`.istevit.app.data.repository.home.HomeRepoImpl
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 const val TAG = "AnnouncementsViewModel"
 
-class AnnouncementsViewModel: ViewModel() {
-    private val repo: HomeRepoImpl = HomeRepoImpl()
+@HiltViewModel
+class AnnouncementsViewModel @Inject constructor(private val repo: HomeRepoImpl): ViewModel() {
     var announcementsList = MutableLiveData<List<HomeAnnouncementsData>>()
     var carouselList = MutableLiveData<List<HomeCarouselData>>()
 

@@ -5,10 +5,12 @@ import `in`.istevit.app.data.repository.flagship.FlagshipRepoImpl
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class FlagshipViewmodel: ViewModel() {
-    private val repo: FlagshipRepoImpl = FlagshipRepoImpl()
+@HiltViewModel
+class FlagshipViewmodel @Inject constructor(private val repo: FlagshipRepoImpl): ViewModel() {
     var flagshipList = MutableLiveData<List<FlagshipModel>>()
 
     fun fetchFlagshipEvents(){

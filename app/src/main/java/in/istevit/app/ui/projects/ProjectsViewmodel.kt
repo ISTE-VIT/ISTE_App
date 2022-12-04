@@ -5,10 +5,12 @@ import `in`.istevit.app.data.repository.projects.ProjectsRepoImpl
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class ProjectsViewmodel: ViewModel() {
-    private val repo:ProjectsRepoImpl = ProjectsRepoImpl()
+@HiltViewModel
+class ProjectsViewmodel @Inject constructor(private val repo:ProjectsRepoImpl): ViewModel() {
     var projectsList = MutableLiveData<List<ProjectsModel>>()
 
     fun getProjects(){

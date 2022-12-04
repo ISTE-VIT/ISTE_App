@@ -2,14 +2,14 @@ package `in`.istevit.app.data.repository.home
 
 import `in`.istevit.app.data.model.home.HomeAnnouncementsData
 import `in`.istevit.app.data.model.home.HomeCarouselData
-import `in`.istevit.app.data.network.service.RetrofitService
+import `in`.istevit.app.data.network.service.CommonNetworkService
 import android.util.Log
 import java.net.UnknownHostException
+import javax.inject.Inject
 
 private const val TAG = "HomeRepoImpl"
 
-class HomeRepoImpl {
-    private val service = RetrofitService.getRetroInstance().create(HomeRepo::class.java)
+class HomeRepoImpl @Inject constructor(private val service: CommonNetworkService) {
 
     suspend fun fetchAnnouncementsData(): Result<List<HomeAnnouncementsData>>{
         return try {
