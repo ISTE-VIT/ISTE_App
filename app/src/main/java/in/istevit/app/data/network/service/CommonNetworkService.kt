@@ -3,8 +3,10 @@ package `in`.istevit.app.data.network.service
 import `in`.istevit.app.data.model.*
 import `in`.istevit.app.data.model.home.HomeAnnouncementsData
 import `in`.istevit.app.data.model.home.HomeCarouselData
+import `in`.istevit.app.data.model.resources.ResourcesDetailModel
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface CommonNetworkService {
     // Home
@@ -33,4 +35,8 @@ interface CommonNetworkService {
     // Projects
     @GET("/projects/")
     suspend fun getProjects(): Response<List<ProjectsModel>>
+
+    // Resources
+    @GET("/resources/find/{res}")
+    suspend fun getResources(@Path("res") res: String): Response<List<ResourcesDetailModel>>
 }

@@ -9,7 +9,9 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FlagshipActivity : AppCompatActivity(), FlagshipOnClickCallback{
     lateinit var binding: ActivityFlagshipBinding
     private lateinit var adapter: FlagshipAdapter
@@ -30,11 +32,11 @@ class FlagshipActivity : AppCompatActivity(), FlagshipOnClickCallback{
 
         adapter = FlagshipAdapter(this).also { it.setCallback(this) }
         binding.recyclerView.adapter = adapter
-        binding.recyclerView.layoutManager = LinearLayoutManager(this@FlagshipActivity)
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
     }
 
     override fun onClick(item: FlagshipModel) {
-        val intent = Intent(this@FlagshipActivity, FlagshipDetailsActivity::class.java)
+        val intent = Intent(this, FlagshipDetailsActivity::class.java)
         intent.putExtra("model", item)
         startActivity(intent)
     }

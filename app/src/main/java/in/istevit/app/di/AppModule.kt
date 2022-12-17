@@ -4,6 +4,7 @@ import `in`.istevit.app.data.database.ImagesDao
 import `in`.istevit.app.data.database.ImagesDatabase
 import `in`.istevit.app.data.network.service.CommonNetworkService
 import `in`.istevit.app.data.network.service.RetrofitService
+import `in`.istevit.app.data.repository.ResourcesRepoImpl
 import `in`.istevit.app.data.repository.blogs.BlogsRepoImpl
 import `in`.istevit.app.data.repository.events.EventsRepoImpl
 import `in`.istevit.app.data.repository.flagship.FlagshipRepoImpl
@@ -76,5 +77,11 @@ object AppModule {
     @Singleton
     fun provideGalleryRepository(dao: ImagesDao, service: CommonNetworkService): GalleryRepoImpl{
         return GalleryRepoImpl(dao, service)
+    }
+
+    @Provides
+    @Singleton
+    fun provideResourcesData(service: CommonNetworkService): ResourcesRepoImpl{
+        return ResourcesRepoImpl(service)
     }
 }

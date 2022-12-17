@@ -1,7 +1,6 @@
 package `in`.istevit.app.ui.gallery
 
 import `in`.istevit.app.adapters.GalleryAdapter
-import `in`.istevit.app.data.model.GalleryModel
 import `in`.istevit.app.databinding.FragmentGalleryBinding
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,10 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import kotlinx.coroutines.launch
 
 class GalleryFragment : Fragment() {
     lateinit var binding: FragmentGalleryBinding
@@ -22,22 +19,23 @@ class GalleryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentGalleryBinding.inflate(layoutInflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewmodel = ViewModelProvider(requireActivity())[GalleryViewmodel::class.java]
-        lifecycleScope.launch {
-            viewmodel.fetchGallery().observe(viewLifecycleOwner) {
-                galleryAdapter.submitList(it.toMutableList())
-            }
-        }
 
-        galleryAdapter = GalleryAdapter()
+        viewmodel = ViewModelProvider(requireActivity())[GalleryViewmodel::class.java]
+
+        galleryAdapter = GalleryAdapter(requireActivity())
         binding.recyclerView.adapter = galleryAdapter
-        binding.recyclerView.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+        binding.recyclerView.layoutManager =
+            StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+
+        viewmodel.galleryData.observe(viewLifecycleOwner) {
+            galleryAdapter.submitList(it.toMutableList())
+        }
     }
 }

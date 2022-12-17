@@ -10,6 +10,15 @@ kapt {
 }
 
 android {
+    signingConfigs {
+        config {
+            storeFile file('/Users/vanditvasa/keystore1')
+            storePassword 'ISTEVIT@1234'
+            keyAlias 'key0'
+            keyPassword 'ISTEVIT@1234'
+        }
+    }
+    namespace "in.istevit.app"
     compileSdk 33
 
     defaultConfig {
@@ -20,10 +29,18 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config
     }
 
     buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", "\"https://node-api-blond.vercel.app/\""
+            minifyEnabled false
+            versionNameSuffix "_Debug"
+            debuggable true
+        }
         release {
+            buildConfigField "String", "BASE_URL", "\"https://node-api-blond.vercel.app/\""
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -36,7 +53,7 @@ android {
         jvmTarget = '1.8'
     }
 
-    buildFeatures{
+    buildFeatures {
         dataBinding true
     }
 }
@@ -78,10 +95,8 @@ dependencies {
     // Interceptor
     implementation 'com.localebro:okhttpprofiler:1.0.8'
 
-    // PhotoView
-    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
-//    implementation 'it.sephiroth.android.library.imagezoom:imagezoom:2.3.0'
-//    implementation 'io.github.imablanco:zoomy:1.1.0'
+    // ImageZoom
+    implementation 'com.github.okaybroda:ImageZoom:1.1.0'
 
     // Open Graph Protocol
     implementation 'org.jsoup:jsoup:1.13.1'

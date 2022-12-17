@@ -1,5 +1,6 @@
 package `in`.istevit.app.ui.resources
 
+import `in`.istevit.app.BuildConfig
 import `in`.istevit.app.R
 import `in`.istevit.app.adapters.ResourcesAdapter
 import `in`.istevit.app.data.model.resources.ResourcesData

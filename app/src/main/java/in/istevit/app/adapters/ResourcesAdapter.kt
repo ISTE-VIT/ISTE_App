@@ -36,7 +36,7 @@ class ResourcesAdapter: ListAdapter<ResourcesData, ResourcesAdapter.ItemViewHold
                 imageView.setImageResource(item.image)
                 title.text = item.title
                 constrainLayout.setOnClickListener {
-                    constrainLayout.context.startActivity(Intent(constrainLayout.context, ResourcesDetailActivity::class.java).putExtra("id", item.id))
+                    constrainLayout.context.startActivity(Intent(constrainLayout.context, ResourcesDetailActivity::class.java).putExtra("title", item.title))
                 }
             }
         }
