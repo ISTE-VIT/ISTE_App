@@ -32,11 +32,6 @@
         <activity
             android:name=".ui.flagship.FlagshipActivity"
             android:exported="false" />
-
-        <receiver
-            android:name=".util.NotificationService"
-            android:enabled="true" />
-
         <activity
             android:name=".ui.WebviewActivity"
             android:exported="false" />
@@ -69,6 +64,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <meta-data
+            android:name="API_KEY"
+            android:value="${API_KEY}" />
     </application>
 
 </manifest>

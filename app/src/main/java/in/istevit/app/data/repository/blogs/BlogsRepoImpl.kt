@@ -1,5 +1,8 @@
 package `in`.istevit.app.data.repository.blogs
 
+import android.content.Context
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
 import `in`.istevit.app.data.model.BlogDetailsModel
 import `in`.istevit.app.data.network.service.CommonNetworkService
 import android.util.Log
@@ -8,11 +11,15 @@ import javax.inject.Inject
 
 private const val TAG = "BlogsRepoImpl"
 
-class BlogsRepoImpl @Inject constructor(private val service: CommonNetworkService) {
+class BlogsRepoImpl @Inject constructor(private val service: CommonNetworkService, context: Context) {
 
+    private val ai: ApplicationInfo = context.packageManager
+        .getApplicationInfo(context.packageName, PackageManager.GET_META_DATA)
+    private val value = ai.metaData["API_KEY"]
+    private val key = value.toString()
     suspend fun fetchEventsData(): Result<List<BlogDetailsModel>>{
         return try {
-            val response = service.getBlogs()
+            val response = service.getBlogs(key)
             if (response.isSuccessful) {
                 Result.success(response.body()!!)
             } else {

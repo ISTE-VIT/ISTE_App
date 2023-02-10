@@ -45,43 +45,43 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideHomeRepository(service: CommonNetworkService): HomeRepoImpl{
-        return HomeRepoImpl(service)
+    fun provideHomeRepository(service: CommonNetworkService, @ApplicationContext context: Context): HomeRepoImpl{
+        return HomeRepoImpl(service, context)
     }
 
     @Provides
     @Singleton
-    fun provideBlogsRepository(service: CommonNetworkService): BlogsRepoImpl{
-        return BlogsRepoImpl(service)
+    fun provideBlogsRepository(service: CommonNetworkService, @ApplicationContext context: Context): BlogsRepoImpl{
+        return BlogsRepoImpl(service, context)
     }
 
     @Provides
     @Singleton
-    fun provideEventsRepository(service: CommonNetworkService): EventsRepoImpl{
-        return EventsRepoImpl(service)
+    fun provideEventsRepository(service: CommonNetworkService, @ApplicationContext context: Context): EventsRepoImpl{
+        return EventsRepoImpl(service, context)
     }
 
     @Provides
     @Singleton
-    fun provideFlagshipRepository(service: CommonNetworkService): FlagshipRepoImpl{
-        return FlagshipRepoImpl(service)
+    fun provideFlagshipRepository(service: CommonNetworkService, @ApplicationContext context: Context): FlagshipRepoImpl{
+        return FlagshipRepoImpl(service, context)
     }
 
     @Provides
     @Singleton
-    fun provideProjectsRepository(service: CommonNetworkService): ProjectsRepoImpl{
-        return ProjectsRepoImpl(service)
+    fun provideProjectsRepository(service: CommonNetworkService, @ApplicationContext context: Context): ProjectsRepoImpl{
+        return ProjectsRepoImpl(service, context)
     }
 
     @Provides
     @Singleton
-    fun provideGalleryRepository(dao: ImagesDao, service: CommonNetworkService): GalleryRepoImpl{
-        return GalleryRepoImpl(dao, service)
+    fun provideGalleryRepository(dao: ImagesDao, service: CommonNetworkService, @ApplicationContext context: Context): GalleryRepoImpl{
+        return GalleryRepoImpl(dao, service, context)
     }
 
     @Provides
     @Singleton
-    fun provideResourcesData(service: CommonNetworkService): ResourcesRepoImpl{
-        return ResourcesRepoImpl(service)
+    fun provideResourcesData(service: CommonNetworkService, @ApplicationContext context: Context): ResourcesRepoImpl{
+        return ResourcesRepoImpl(service, context)
     }
 }
