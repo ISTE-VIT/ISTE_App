@@ -1,0 +1,23 @@
+const express = require('express');
+const router = express.Router();
+const Blogs = require('../models/Blogs');
+const dotenv = require('dotenv');
+dotenv.config();
+
+router.get('/all', async (req,res) => {
+    if(req.headers['api_key'] === process.env.API_KEY)
+    {
+        try {
+            const blogs = await Blogs.find();
+            res.json(blogs);
+        } catch (err) {
+            res.json({message: err})
+        }
+    }
+    else
+    {
+        res.status(400).json({message: "Access Denied"});
+    }
+});
+
+module.exports = router;
