@@ -14,7 +14,9 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 class GalleryFragment : Fragment() {
     lateinit var binding: FragmentGalleryBinding
     lateinit var galleryAdapter: GalleryAdapter
-    lateinit var viewmodel: GalleryViewmodel
+    private val viewModel by lazy {
+        ViewModelProvider(requireActivity())[GalleryViewmodel::class.java]
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,15 +29,14 @@ class GalleryFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewmodel = ViewModelProvider(requireActivity())[GalleryViewmodel::class.java]
-
-        galleryAdapter = GalleryAdapter(requireActivity())
+        galleryAdapter = GalleryAdapter()
         binding.recyclerView.adapter = galleryAdapter
         binding.recyclerView.layoutManager =
             StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
 
-        viewmodel.galleryData.observe(viewLifecycleOwner) {
+        viewModel.galleryData.observe(viewLifecycleOwner) {
             galleryAdapter.submitList(it.toMutableList())
+            if(it.isNotEmpty()) binding.progressCircular.visibility = View.GONE
         }
     }
 }

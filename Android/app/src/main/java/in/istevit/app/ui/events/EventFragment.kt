@@ -1,28 +1,33 @@
 package `in`.istevit.app.ui.events
 
+import android.content.Intent
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import dagger.hilt.android.AndroidEntryPoint
 import `in`.istevit.app.R
 import `in`.istevit.app.adapters.EventsAdapter
 import `in`.istevit.app.data.model.EventDetailsModel
 import `in`.istevit.app.databinding.FragmentEventBinding
-import android.content.Intent
-import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.chip.Chip
+import `in`.istevit.app.util.Result
 
+@AndroidEntryPoint
 class EventFragment : Fragment(), EventOnClickCallback{
     lateinit var binding: FragmentEventBinding
     var eventsList = mutableListOf<EventDetailsModel>()
-    private lateinit var viewmodel: EventsViewmodel
     private lateinit var eventAdapter: EventsAdapter
     lateinit var eventLayoutManager: LinearLayoutManager
     private var chId: Int = 1
+
+    private val viewModel by lazy {
+        ViewModelProvider(requireActivity())[EventsViewmodel::class.java]
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,25 +40,68 @@ class EventFragment : Fragment(), EventOnClickCallback{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val ai: ApplicationInfo? = context?.let {
+            context?.packageManager
+                ?.getApplicationInfo(it.packageName, PackageManager.GET_META_DATA)
+        }
+        val value = ai?.metaData?.get("API_KEY")
+        val key = value.toString()
+
         eventAdapter = EventsAdapter(requireContext()).also { it.setCallback(this) }
         eventLayoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = eventAdapter
         binding.recyclerView.layoutManager = eventLayoutManager
 
-        viewmodel = ViewModelProvider(requireActivity())[EventsViewmodel::class.java]
+        if (viewModel.eventsList.value == null) {
+            viewModel.fetchEvents(key)
+        } else {
+            when (val res = viewModel.eventsList.value!!) {
+                is Result.Success -> {
+                    eventsList.addAll(res.data)
+                }
 
-        if(viewmodel.eventsList.value != null){
-            eventsList = viewmodel.eventsList.value!!.toMutableList()
+                else -> {
+                    viewModel.fetchEvents(key)
+                }
+            }
             eventAdapter.submitList(eventsList)
             binding.progressCircular.visibility = View.GONE
-        } else {
-            viewmodel.fetchEvents()
         }
 
-        viewmodel.eventsList.observe(viewLifecycleOwner) {
-            eventsList = it.toMutableList()
-            eventAdapter.submitList(eventsList)
-            binding.progressCircular.visibility = View.GONE
+        binding.retryBTN.setOnClickListener {
+            viewModel.fetchEvents(key)
+        }
+
+        viewModel.eventsList.observe(viewLifecycleOwner) {
+            when (it) {
+                is Result.Loading -> {
+                    binding.progressCircular.visibility = View.VISIBLE
+                    binding.errorLayout.visibility = View.GONE
+                    binding.chipAll.isCheckable = false
+                    binding.chipCompleted.isCheckable = false
+                    binding.chipOngoing.isCheckable = false
+                    binding.chipUpcoming.isCheckable = false
+                }
+
+                is Result.Success -> {
+                    eventsList.addAll(it.data)
+                    eventAdapter.submitList(eventsList)
+                    binding.progressCircular.visibility = View.GONE
+                    binding.chipAll.isCheckable = true
+                    binding.chipCompleted.isCheckable = true
+                    binding.chipOngoing.isCheckable = true
+                    binding.chipUpcoming.isCheckable = true
+                }
+
+                else -> {
+                    binding.progressCircular.visibility = View.GONE
+                    binding.errorLayout.visibility = View.VISIBLE
+                    binding.chipAll.isCheckable = false
+                    binding.chipCompleted.isCheckable = false
+                    binding.chipOngoing.isCheckable = false
+                    binding.chipUpcoming.isCheckable = false
+                }
+            }
         }
 
         binding.chipGroup.setOnCheckedChangeListener{

@@ -7,5 +7,6 @@ data class FlagshipModel(
     val description: String,
     val eventName: String,
     val image: String,
-    val tracks: List<String>
+    val tracks: List<String>?,
+    val gallery: List<String>?
 ): Serializable

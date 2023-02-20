@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "in.istevit.app-mergeDebugResources-58:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/vanditvasa/.gradle/caches/transforms-3/be9773c3e732c6d04dd312f734a9150b/transformed/appcompat-1.5.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}

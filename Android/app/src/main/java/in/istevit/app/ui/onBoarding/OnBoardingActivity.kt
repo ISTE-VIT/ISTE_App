@@ -7,11 +7,13 @@ import `in`.istevit.app.util.Constants.Companion.ISTE_SHARED_PREFERENCES
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.google.firebase.messaging.FirebaseMessaging
 
 class OnBoardingActivity : AppCompatActivity() {
     private val context: Context = this
@@ -24,6 +26,13 @@ class OnBoardingActivity : AppCompatActivity() {
         setContentView(binding.root)
         val sharedPreferences = context.getSharedPreferences(ISTE_SHARED_PREFERENCES, MODE_PRIVATE)
         pagerAdapter = OnboardingPagerAdapter(supportFragmentManager)
+
+        FirebaseMessaging.getInstance().subscribeToTopic("events")
+            .addOnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Toast.makeText(this@OnBoardingActivity, "Subscription failed", Toast.LENGTH_SHORT).show()
+                }
+            }
 
         binding.apply {
             viewPager.adapter = pagerAdapter

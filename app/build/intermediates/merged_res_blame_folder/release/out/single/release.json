@@ -1,0 +1,366 @@
+[
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_blogs_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_blogs_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_carousel_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_carousel_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_blog.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_blog.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_bottom_sheet_webview.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/bottom_sheet_webview.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_add.xml.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_add.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable-v24_splash_logo.png.flat",
+        "source": "in.istevit.app-main-61:/drawable-v24/splash_logo.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_tracks_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_tracks_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_github.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_github.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_resources.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_resources.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_home.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_home.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/color_chip_text.xml.flat",
+        "source": "in.istevit.app-main-61:/color/chip_text.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_project_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_project_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_facebook.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_facebook.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_launcher_background.xml.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_event.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_event.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_reload.xml.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_reload.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/font_poppins_bold.xml.flat",
+        "source": "in.istevit.app-main-61:/font/poppins_bold.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/menu_bottom_navigation_menu.xml.flat",
+        "source": "in.istevit.app-main-61:/menu/bottom_navigation_menu.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_bottom_sheet_options.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/bottom_sheet_options.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_event_details.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_event_details.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_on_boarding.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_on_boarding.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_web.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_web.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_back.xml.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_onboarding_dot_default.xml.flat",
+        "source": "in.istevit.app-main-61:/drawable/onboarding_dot_default.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_fragment_event.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/fragment_event.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_flagship.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_flagship.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_cc.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_cc.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable-v24_onboarding_1.png.flat",
+        "source": "in.istevit.app-main-61:/drawable-v24/onboarding_1.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_resources_detail_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_resources_detail_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_close.xml.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_close.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_about.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_about.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_app.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_app.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_flagship.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_flagship.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_webview.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_webview.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/color_chip_background.xml.flat",
+        "source": "in.istevit.app-main-61:/color/chip_background.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_main.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_main.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_fragment_announcements.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/fragment_announcements.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_blog_details.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_blog_details.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_fragment_onboarding.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/fragment_onboarding.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/font_roboto_light.xml.flat",
+        "source": "in.istevit.app-main-61:/font/roboto_light.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable-v24_ic_round_plus.png.flat",
+        "source": "in.istevit.app-main-61:/drawable-v24/ic_round_plus.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_flagship_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_flagship_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/font_work_sans.xml.flat",
+        "source": "in.istevit.app-main-61:/font/work_sans.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_resources_inner_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_resources_inner_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_image_cover.xml.flat",
+        "source": "in.istevit.app-main-61:/drawable/image_cover.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_onboarding_dot_selector.xml.flat",
+        "source": "in.istevit.app-main-61:/drawable/onboarding_dot_selector.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/font_poppins.xml.flat",
+        "source": "in.istevit.app-main-61:/font/poppins.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_flagship_details.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_flagship_details.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/font_roboto.xml.flat",
+        "source": "in.istevit.app-main-61:/font/roboto.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_youtube.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_youtube.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_fragment_blog.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/fragment_blog.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/raw_empty_lottie.json.flat",
+        "source": "in.istevit.app-main-61:/raw/empty_lottie.json"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable-v24_res_sample.png.flat",
+        "source": "in.istevit.app-main-61:/drawable-v24/res_sample.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable-v24_onboarding_2.png.flat",
+        "source": "in.istevit.app-main-61:/drawable-v24/onboarding_2.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/raw_empty.json.flat",
+        "source": "in.istevit.app-main-61:/raw/empty.json"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_gallery_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_gallery_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_linkedin.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_linkedin.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "in.istevit.app-main-61:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_resources.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_resources.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_events_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_events_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_onboarding_dot_selected.xml.flat",
+        "source": "in.istevit.app-main-61:/drawable/onboarding_dot_selected.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_ai.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_ai.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/navigation_nav_graph.xml.flat",
+        "source": "in.istevit.app-main-61:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_design.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_design.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_instagram.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_instagram.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_projects.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_projects.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/xml_backup_rules.xml.flat",
+        "source": "in.istevit.app-main-61:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_fragment_gallery.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/fragment_gallery.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_electronics.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_electronics.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/xml_data_extraction_rules.xml.flat",
+        "source": "in.istevit.app-main-61:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_announcements_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_announcements_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_splash.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_activity_resources_detail.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/activity_resources_detail.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable_ic_gallery.png.flat",
+        "source": "in.istevit.app-main-61:/drawable/ic_gallery.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/layout_single_resources_item.xml.flat",
+        "source": "in.istevit.app-main-61:/layout/single_resources_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "in.istevit.app-main-61:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "in.istevit.app-merged_res-60:/drawable-v24_iste_logo.png.flat",
+        "source": "in.istevit.app-main-61:/drawable-v24/iste_logo.png"
+    }
+]

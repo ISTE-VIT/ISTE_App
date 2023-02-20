@@ -1,0 +1,485 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:2:1-74:12
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:2:1-74:12
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:2:1-74:12
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:2:1-74:12
+MERGED from [androidx.databinding:databinding-adapters:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/39253857bebbae96bd654eec6a81efcf/transformed/databinding-adapters-7.3.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.databinding:databinding-ktx:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/852a49dc7b86987d6a5316e770a0e7c8/transformed/databinding-ktx-7.3.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.databinding:databinding-runtime:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/35f0a59b64aadbf990335e4ab719599c/transformed/databinding-runtime-7.3.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.ismaeldivita:chip-navigation-bar:1.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/e7bbb5ba3fa0f22964c563b6c1de8fd5/transformed/chip-navigation-bar-1.4.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.room:room-ktx:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/997e18b06e8fd96e00343cbaa7d20787/transformed/room-ktx-2.4.3/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.dagger:hilt-android:2.44.2] /Users/vanditvasa/.gradle/caches/transforms-3/ac1bb47b1b04536d3f61a4e1949a6395/transformed/hilt-android-2.44.2/AndroidManifest.xml:16:1-19:12
+MERGED from [com.hendraanggrian.material:collapsingtoolbarlayout-subtitle:1.5.0] /Users/vanditvasa/.gradle/caches/transforms-3/222eabe3a64bea3a8b31713e3adbfabd/transformed/collapsingtoolbarlayout-subtitle-1.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/af6366caafd83e7ef9a1f2bd5cf79ab1/transformed/navigation-ui-ktx-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/f8fdcadf3c53f2b3cce2dfcd1e859b9e/transformed/navigation-ui-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.7.0] /Users/vanditvasa/.gradle/caches/transforms-3/870d6e69978c166ed15cb58d8d2b4233/transformed/material-1.7.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/vanditvasa/.gradle/caches/transforms-3/852b5354f77ab4b67c104c6580a46ffe/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [com.airbnb.android:lottie:3.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/13156a13ce987b42caa673accbabf0d9/transformed/lottie-3.4.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.ramotion.paperonboarding:paper-onboarding:1.1.3] /Users/vanditvasa/.gradle/caches/transforms-3/69370ed0028f384fe85c9e1b4e01603d/transformed/paper-onboarding-1.1.3/AndroidManifest.xml:2:1-17:12
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/0262a827c0e2c1bda82b30ca09761906/transformed/appcompat-resources-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/be9773c3e732c6d04dd312f734a9150b/transformed/appcompat-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.13.0] /Users/vanditvasa/.gradle/caches/transforms-3/8271d58735a60e46108212f98133fbb1/transformed/glide-4.13.0/AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/a4fc3507c14e678caa5a481dd244905e/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/840b259ee986eec7bf974d82d58fb4b0/transformed/navigation-fragment-ktx-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-fragment:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/8d9863d0a4f162f74a3bf77b9825f4af/transformed/navigation-fragment-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.5.4] /Users/vanditvasa/.gradle/caches/transforms-3/8e977ceb9268a7f2a88d0d527e08d0db/transformed/fragment-ktx-1.5.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.5.4] /Users/vanditvasa/.gradle/caches/transforms-3/4e918c5f86d88627b85e1b191a51fe92/transformed/fragment-1.5.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/400a1b5578eeb5b0233e241fcece047e/transformed/navigation-runtime-ktx-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/a99992861cce4af3753651d63fc85e31/transformed/navigation-runtime-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/30857f0fedc015648d4590af1eb3eef2/transformed/activity-ktx-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/775c8a6f9d7575fafaeb6e1cbd4b519d/transformed/activity-1.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/e80c51cb8cc06e2b74236f773ec6e228/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/7dd1b7f59cb7faa6d5b72a144dde9038/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/e8628708d930f1a8129db5df29ba2af0/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/8555a8473c731588bf8460bb28edcdac/transformed/navigation-common-ktx-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/a9f1a6f71bef0b2acd5c0972b918c858/transformed/navigation-common-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/b5d331b5fbda811eff0eb1ee2a522970/transformed/lifecycle-viewmodel-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/73fd58bef979721c97b23049d2b3b696/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/10b31d79064e70fff13c91af78e30871/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/a2c1694e81566eaaa7f6802d40e61f9f/transformed/lifecycle-runtime-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/7cc3a01116d1183020d963cdfea186cc/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/71a7ab6db3a0180c1a82a6a6a16f99c7/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/0e99835ce169da75bd749e169123c6f2/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/c6f24757bc2949dc255418d82b215cc0/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/a425b9fdb5fee732eb24a4e410849987/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/1b2ab34ed3c5eacec09b10f2085fe529/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/d8e0094fc518b1c1671e057eff2e2a83/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/9ba5e860b569932ad47b4e845b9050ab/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/a4db52b15bebd6cfa1aa5f92e6082778/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/451179355b46f5e8f70056d639079ed4/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/bee525edaca5977b1cad84133df97b29/transformed/core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.localebro:okhttpprofiler:1.0.8] /Users/vanditvasa/.gradle/caches/transforms-3/1d7e14403d0c1751c1ccd9f9693a56f4/transformed/okhttpprofiler-1.0.8/AndroidManifest.xml:2:1-13:12
+MERGED from [com.github.okaybroda:ImageZoom:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/158e0870ec280b0390ca8b7efef2865a/transformed/ImageZoom-1.1.0/AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.room:room-runtime:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/53df509dd0435aee32e59bab4bbb0b8d/transformed/room-runtime-2.4.3/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/391c7bce6a62cf52e4976bb456424f68/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.databinding:viewbinding:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/e0f95e3e9df6edde1869c1f9c94f1a2f/transformed/viewbinding-7.3.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-service:2.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/673ee3037d7cee3ad5492977ee50f31f/transformed/lifecycle-service-2.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/29e964bf3fe41fcc424c14862fa9375f/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/4c45aff7bfa3fa01a903f5fa2f239cbe/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/c43bbb74a25310e89007cc7bc807d38e/transformed/lifecycle-livedata-2.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/75dbaf570c0b4811151d532331dfa89a/transformed/savedstate-ktx-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/f0b3f8941e9c2fe9a1a94f3a94ceeaad/transformed/savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/vanditvasa/.gradle/caches/transforms-3/034ffa64ae9895adad4a71f60be8fbd4/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/dff3b8165243211416ca26b89c810af5/transformed/lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/aa5d5ca0a0a9c215f12f4915c0897b30/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/05e5095101255386b362b3a474d9e2a6/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] /Users/vanditvasa/.gradle/caches/transforms-3/bd2b6b28c31384b1670bffc1b919d173/transformed/gifdecoder-4.13.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/b363e30a296a606b582848cf3a0ea0c4/transformed/exifinterface-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/9b2bd8e5b6696f3c0051f1c915b31966/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/6333c04aa8703d29d661131ac0768def/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/b1cd71936f2ab09f412e853d3bdf3e95/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/9ebdd7fd960004e03e1bbc269f9e890d/transformed/sqlite-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/be3c8c3b9135f5c4eec1c20ec552d24b/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/deed656b7130edf43bf944d05e5554f7/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/cff35f5198838cf6b2c54ce755705419/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/58c7477d5076e90862d3497c726a1231/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/692a367f45f33d451f4b179e863d6a97/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/2c5b41e0a255a620dc56ea707d443c59/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.44.2] /Users/vanditvasa/.gradle/caches/transforms-3/4951b905e109a7d7803e5a63b0def11e/transformed/dagger-lint-aar-2.44.2/AndroidManifest.xml:16:1-19:12
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:2:1-74:12
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:2:1-74:12
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:2:1-74:12
+	package
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:4:5-29
+		INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:2:1-74:12
+		INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:2:1-74:12
+		INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:6:5-67
+MERGED from [com.localebro:okhttpprofiler:1.0.8] /Users/vanditvasa/.gradle/caches/transforms-3/1d7e14403d0c1751c1ccd9f9693a56f4/transformed/okhttpprofiler-1.0.8/AndroidManifest.xml:11:5-67
+MERGED from [com.localebro:okhttpprofiler:1.0.8] /Users/vanditvasa/.gradle/caches/transforms-3/1d7e14403d0c1751c1ccd9f9693a56f4/transformed/okhttpprofiler-1.0.8/AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:7:22-76
+application
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:9:5-72:19
+MERGED from [com.google.android.material:material:1.7.0] /Users/vanditvasa/.gradle/caches/transforms-3/870d6e69978c166ed15cb58d8d2b4233/transformed/material-1.7.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.7.0] /Users/vanditvasa/.gradle/caches/transforms-3/870d6e69978c166ed15cb58d8d2b4233/transformed/material-1.7.0/AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/vanditvasa/.gradle/caches/transforms-3/852b5354f77ab4b67c104c6580a46ffe/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/vanditvasa/.gradle/caches/transforms-3/852b5354f77ab4b67c104c6580a46ffe/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:3.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/13156a13ce987b42caa673accbabf0d9/transformed/lottie-3.4.0/AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:3.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/13156a13ce987b42caa673accbabf0d9/transformed/lottie-3.4.0/AndroidManifest.xml:9:5-20
+MERGED from [com.ramotion.paperonboarding:paper-onboarding:1.1.3] /Users/vanditvasa/.gradle/caches/transforms-3/69370ed0028f384fe85c9e1b4e01603d/transformed/paper-onboarding-1.1.3/AndroidManifest.xml:11:5-15:19
+MERGED from [com.ramotion.paperonboarding:paper-onboarding:1.1.3] /Users/vanditvasa/.gradle/caches/transforms-3/69370ed0028f384fe85c9e1b4e01603d/transformed/paper-onboarding-1.1.3/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.bumptech.glide:glide:4.13.0] /Users/vanditvasa/.gradle/caches/transforms-3/8271d58735a60e46108212f98133fbb1/transformed/glide-4.13.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.13.0] /Users/vanditvasa/.gradle/caches/transforms-3/8271d58735a60e46108212f98133fbb1/transformed/glide-4.13.0/AndroidManifest.xml:10:5-20
+MERGED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [com.github.okaybroda:ImageZoom:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/158e0870ec280b0390ca8b7efef2865a/transformed/ImageZoom-1.1.0/AndroidManifest.xml:11:5-12:19
+MERGED from [com.github.okaybroda:ImageZoom:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/158e0870ec280b0390ca8b7efef2865a/transformed/ImageZoom-1.1.0/AndroidManifest.xml:11:5-12:19
+MERGED from [androidx.room:room-runtime:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/53df509dd0435aee32e59bab4bbb0b8d/transformed/room-runtime-2.4.3/AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/53df509dd0435aee32e59bab4bbb0b8d/transformed/room-runtime-2.4.3/AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/391c7bce6a62cf52e4976bb456424f68/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/391c7bce6a62cf52e4976bb456424f68/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/29e964bf3fe41fcc424c14862fa9375f/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/29e964bf3fe41fcc424c14862fa9375f/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] /Users/vanditvasa/.gradle/caches/transforms-3/bd2b6b28c31384b1670bffc1b919d173/transformed/gifdecoder-4.13.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] /Users/vanditvasa/.gradle/caches/transforms-3/bd2b6b28c31384b1670bffc1b919d173/transformed/gifdecoder-4.13.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/9b2bd8e5b6696f3c0051f1c915b31966/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/9b2bd8e5b6696f3c0051f1c915b31966/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:17:9-35
+	android:label
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:15:9-41
+	android:fullBackupContent
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:13:9-54
+	android:roundIcon
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:16:9-54
+	tools:targetApi
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:19:9-29
+	android:icon
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:14:9-43
+	android:allowBackup
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:11:9-35
+	android:theme
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:18:9-45
+	android:dataExtractionRules
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:12:9-65
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:10:9-32
+activity#in.istevit.app.ui.resources.ResourcesDetailActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:20:9-22:40
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:21:13-65
+activity#in.istevit.app.ui.resources.ResourcesActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:23:9-25:40
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:24:13-59
+activity#in.istevit.app.ui.projects.ProjectsActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:26:9-28:40
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:27:13-57
+activity#in.istevit.app.ui.flagship.FlagshipDetailsActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:29:9-31:40
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:30:13-64
+activity#in.istevit.app.ui.flagship.FlagshipActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:33:13-57
+receiver#in.istevit.app.util.NotificationService
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:36:9-38:38
+	android:enabled
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:38:13-35
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:37:13-53
+activity#in.istevit.app.ui.WebviewActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:40:9-42:40
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:42:13-37
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:41:13-47
+activity#in.istevit.app.ui.events.EventDetailsActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:43:9-45:40
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:45:13-37
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:44:13-59
+activity#in.istevit.app.ui.blogs.BlogDetailsActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:46:9-48:40
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:48:13-37
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:47:13-57
+activity#in.istevit.app.ui.onBoarding.OnBoardingActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:49:9-51:40
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:51:13-37
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:50:13-61
+activity#in.istevit.app.ui.SplashActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:52:9-60:20
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:54:13-36
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:53:13-46
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:55:13-59:29
+action#android.intent.action.MAIN
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:56:17-69
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:56:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:58:17-77
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:58:27-74
+activity#in.istevit.app.ui.MainActivity
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:61:9-67:20
+	android:exported
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:63:13-36
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:62:13-44
+intent-filter#action:name:android.intent.action.MAIN
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:64:13-66:29
+meta-data#preloaded_fonts
+ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:69:9-71:57
+	android:resource
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:71:13-54
+	android:name
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml:70:13-43
+uses-sdk
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:databinding-adapters:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/39253857bebbae96bd654eec6a81efcf/transformed/databinding-adapters-7.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:databinding-adapters:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/39253857bebbae96bd654eec6a81efcf/transformed/databinding-adapters-7.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:databinding-ktx:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/852a49dc7b86987d6a5316e770a0e7c8/transformed/databinding-ktx-7.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:databinding-ktx:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/852a49dc7b86987d6a5316e770a0e7c8/transformed/databinding-ktx-7.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:databinding-runtime:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/35f0a59b64aadbf990335e4ab719599c/transformed/databinding-runtime-7.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:databinding-runtime:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/35f0a59b64aadbf990335e4ab719599c/transformed/databinding-runtime-7.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.ismaeldivita:chip-navigation-bar:1.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/e7bbb5ba3fa0f22964c563b6c1de8fd5/transformed/chip-navigation-bar-1.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.ismaeldivita:chip-navigation-bar:1.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/e7bbb5ba3fa0f22964c563b6c1de8fd5/transformed/chip-navigation-bar-1.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.room:room-ktx:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/997e18b06e8fd96e00343cbaa7d20787/transformed/room-ktx-2.4.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/997e18b06e8fd96e00343cbaa7d20787/transformed/room-ktx-2.4.3/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:hilt-android:2.44.2] /Users/vanditvasa/.gradle/caches/transforms-3/ac1bb47b1b04536d3f61a4e1949a6395/transformed/hilt-android-2.44.2/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.44.2] /Users/vanditvasa/.gradle/caches/transforms-3/ac1bb47b1b04536d3f61a4e1949a6395/transformed/hilt-android-2.44.2/AndroidManifest.xml:18:3-42
+MERGED from [com.hendraanggrian.material:collapsingtoolbarlayout-subtitle:1.5.0] /Users/vanditvasa/.gradle/caches/transforms-3/222eabe3a64bea3a8b31713e3adbfabd/transformed/collapsingtoolbarlayout-subtitle-1.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.hendraanggrian.material:collapsingtoolbarlayout-subtitle:1.5.0] /Users/vanditvasa/.gradle/caches/transforms-3/222eabe3a64bea3a8b31713e3adbfabd/transformed/collapsingtoolbarlayout-subtitle-1.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/af6366caafd83e7ef9a1f2bd5cf79ab1/transformed/navigation-ui-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/af6366caafd83e7ef9a1f2bd5cf79ab1/transformed/navigation-ui-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/f8fdcadf3c53f2b3cce2dfcd1e859b9e/transformed/navigation-ui-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/f8fdcadf3c53f2b3cce2dfcd1e859b9e/transformed/navigation-ui-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.7.0] /Users/vanditvasa/.gradle/caches/transforms-3/870d6e69978c166ed15cb58d8d2b4233/transformed/material-1.7.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.7.0] /Users/vanditvasa/.gradle/caches/transforms-3/870d6e69978c166ed15cb58d8d2b4233/transformed/material-1.7.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/vanditvasa/.gradle/caches/transforms-3/852b5354f77ab4b67c104c6580a46ffe/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/vanditvasa/.gradle/caches/transforms-3/852b5354f77ab4b67c104c6580a46ffe/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:3.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/13156a13ce987b42caa673accbabf0d9/transformed/lottie-3.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:3.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/13156a13ce987b42caa673accbabf0d9/transformed/lottie-3.4.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.ramotion.paperonboarding:paper-onboarding:1.1.3] /Users/vanditvasa/.gradle/caches/transforms-3/69370ed0028f384fe85c9e1b4e01603d/transformed/paper-onboarding-1.1.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.ramotion.paperonboarding:paper-onboarding:1.1.3] /Users/vanditvasa/.gradle/caches/transforms-3/69370ed0028f384fe85c9e1b4e01603d/transformed/paper-onboarding-1.1.3/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/0262a827c0e2c1bda82b30ca09761906/transformed/appcompat-resources-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/0262a827c0e2c1bda82b30ca09761906/transformed/appcompat-resources-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/be9773c3e732c6d04dd312f734a9150b/transformed/appcompat-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/be9773c3e732c6d04dd312f734a9150b/transformed/appcompat-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.13.0] /Users/vanditvasa/.gradle/caches/transforms-3/8271d58735a60e46108212f98133fbb1/transformed/glide-4.13.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.13.0] /Users/vanditvasa/.gradle/caches/transforms-3/8271d58735a60e46108212f98133fbb1/transformed/glide-4.13.0/AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/a4fc3507c14e678caa5a481dd244905e/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/a4fc3507c14e678caa5a481dd244905e/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/840b259ee986eec7bf974d82d58fb4b0/transformed/navigation-fragment-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/840b259ee986eec7bf974d82d58fb4b0/transformed/navigation-fragment-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/8d9863d0a4f162f74a3bf77b9825f4af/transformed/navigation-fragment-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/8d9863d0a4f162f74a3bf77b9825f4af/transformed/navigation-fragment-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.4] /Users/vanditvasa/.gradle/caches/transforms-3/8e977ceb9268a7f2a88d0d527e08d0db/transformed/fragment-ktx-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.4] /Users/vanditvasa/.gradle/caches/transforms-3/8e977ceb9268a7f2a88d0d527e08d0db/transformed/fragment-ktx-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] /Users/vanditvasa/.gradle/caches/transforms-3/4e918c5f86d88627b85e1b191a51fe92/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] /Users/vanditvasa/.gradle/caches/transforms-3/4e918c5f86d88627b85e1b191a51fe92/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/400a1b5578eeb5b0233e241fcece047e/transformed/navigation-runtime-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/400a1b5578eeb5b0233e241fcece047e/transformed/navigation-runtime-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/a99992861cce4af3753651d63fc85e31/transformed/navigation-runtime-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/a99992861cce4af3753651d63fc85e31/transformed/navigation-runtime-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/30857f0fedc015648d4590af1eb3eef2/transformed/activity-ktx-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/30857f0fedc015648d4590af1eb3eef2/transformed/activity-ktx-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/775c8a6f9d7575fafaeb6e1cbd4b519d/transformed/activity-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/775c8a6f9d7575fafaeb6e1cbd4b519d/transformed/activity-1.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/e80c51cb8cc06e2b74236f773ec6e228/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/e80c51cb8cc06e2b74236f773ec6e228/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/7dd1b7f59cb7faa6d5b72a144dde9038/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/7dd1b7f59cb7faa6d5b72a144dde9038/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/e8628708d930f1a8129db5df29ba2af0/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/e8628708d930f1a8129db5df29ba2af0/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/8555a8473c731588bf8460bb28edcdac/transformed/navigation-common-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/8555a8473c731588bf8460bb28edcdac/transformed/navigation-common-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/a9f1a6f71bef0b2acd5c0972b918c858/transformed/navigation-common-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.3] /Users/vanditvasa/.gradle/caches/transforms-3/a9f1a6f71bef0b2acd5c0972b918c858/transformed/navigation-common-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/b5d331b5fbda811eff0eb1ee2a522970/transformed/lifecycle-viewmodel-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/b5d331b5fbda811eff0eb1ee2a522970/transformed/lifecycle-viewmodel-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/73fd58bef979721c97b23049d2b3b696/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/73fd58bef979721c97b23049d2b3b696/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/10b31d79064e70fff13c91af78e30871/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/10b31d79064e70fff13c91af78e30871/transformed/lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/a2c1694e81566eaaa7f6802d40e61f9f/transformed/lifecycle-runtime-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/a2c1694e81566eaaa7f6802d40e61f9f/transformed/lifecycle-runtime-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/7cc3a01116d1183020d963cdfea186cc/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/7cc3a01116d1183020d963cdfea186cc/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/71a7ab6db3a0180c1a82a6a6a16f99c7/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/71a7ab6db3a0180c1a82a6a6a16f99c7/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/0e99835ce169da75bd749e169123c6f2/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/0e99835ce169da75bd749e169123c6f2/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/c6f24757bc2949dc255418d82b215cc0/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/c6f24757bc2949dc255418d82b215cc0/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/a425b9fdb5fee732eb24a4e410849987/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/a425b9fdb5fee732eb24a4e410849987/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/1b2ab34ed3c5eacec09b10f2085fe529/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/1b2ab34ed3c5eacec09b10f2085fe529/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/d8e0094fc518b1c1671e057eff2e2a83/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/d8e0094fc518b1c1671e057eff2e2a83/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/9ba5e860b569932ad47b4e845b9050ab/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/9ba5e860b569932ad47b4e845b9050ab/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/a4db52b15bebd6cfa1aa5f92e6082778/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/a4db52b15bebd6cfa1aa5f92e6082778/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/451179355b46f5e8f70056d639079ed4/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/451179355b46f5e8f70056d639079ed4/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/bee525edaca5977b1cad84133df97b29/transformed/core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/bee525edaca5977b1cad84133df97b29/transformed/core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [com.localebro:okhttpprofiler:1.0.8] /Users/vanditvasa/.gradle/caches/transforms-3/1d7e14403d0c1751c1ccd9f9693a56f4/transformed/okhttpprofiler-1.0.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.localebro:okhttpprofiler:1.0.8] /Users/vanditvasa/.gradle/caches/transforms-3/1d7e14403d0c1751c1ccd9f9693a56f4/transformed/okhttpprofiler-1.0.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.okaybroda:ImageZoom:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/158e0870ec280b0390ca8b7efef2865a/transformed/ImageZoom-1.1.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.okaybroda:ImageZoom:1.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/158e0870ec280b0390ca8b7efef2865a/transformed/ImageZoom-1.1.0/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.room:room-runtime:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/53df509dd0435aee32e59bab4bbb0b8d/transformed/room-runtime-2.4.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/53df509dd0435aee32e59bab4bbb0b8d/transformed/room-runtime-2.4.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/391c7bce6a62cf52e4976bb456424f68/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/391c7bce6a62cf52e4976bb456424f68/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.databinding:viewbinding:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/e0f95e3e9df6edde1869c1f9c94f1a2f/transformed/viewbinding-7.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:viewbinding:7.3.1] /Users/vanditvasa/.gradle/caches/transforms-3/e0f95e3e9df6edde1869c1f9c94f1a2f/transformed/viewbinding-7.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/673ee3037d7cee3ad5492977ee50f31f/transformed/lifecycle-service-2.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-service:2.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/673ee3037d7cee3ad5492977ee50f31f/transformed/lifecycle-service-2.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/29e964bf3fe41fcc424c14862fa9375f/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/29e964bf3fe41fcc424c14862fa9375f/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/4c45aff7bfa3fa01a903f5fa2f239cbe/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/4c45aff7bfa3fa01a903f5fa2f239cbe/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/c43bbb74a25310e89007cc7bc807d38e/transformed/lifecycle-livedata-2.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.4.0] /Users/vanditvasa/.gradle/caches/transforms-3/c43bbb74a25310e89007cc7bc807d38e/transformed/lifecycle-livedata-2.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/75dbaf570c0b4811151d532331dfa89a/transformed/savedstate-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/75dbaf570c0b4811151d532331dfa89a/transformed/savedstate-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/f0b3f8941e9c2fe9a1a94f3a94ceeaad/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/f0b3f8941e9c2fe9a1a94f3a94ceeaad/transformed/savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/vanditvasa/.gradle/caches/transforms-3/034ffa64ae9895adad4a71f60be8fbd4/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/vanditvasa/.gradle/caches/transforms-3/034ffa64ae9895adad4a71f60be8fbd4/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/dff3b8165243211416ca26b89c810af5/transformed/lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/dff3b8165243211416ca26b89c810af5/transformed/lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/aa5d5ca0a0a9c215f12f4915c0897b30/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/aa5d5ca0a0a9c215f12f4915c0897b30/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/05e5095101255386b362b3a474d9e2a6/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/05e5095101255386b362b3a474d9e2a6/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] /Users/vanditvasa/.gradle/caches/transforms-3/bd2b6b28c31384b1670bffc1b919d173/transformed/gifdecoder-4.13.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.13.0] /Users/vanditvasa/.gradle/caches/transforms-3/bd2b6b28c31384b1670bffc1b919d173/transformed/gifdecoder-4.13.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/b363e30a296a606b582848cf3a0ea0c4/transformed/exifinterface-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/b363e30a296a606b582848cf3a0ea0c4/transformed/exifinterface-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/9b2bd8e5b6696f3c0051f1c915b31966/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/9b2bd8e5b6696f3c0051f1c915b31966/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/6333c04aa8703d29d661131ac0768def/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/6333c04aa8703d29d661131ac0768def/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/b1cd71936f2ab09f412e853d3bdf3e95/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/b1cd71936f2ab09f412e853d3bdf3e95/transformed/sqlite-framework-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/9ebdd7fd960004e03e1bbc269f9e890d/transformed/sqlite-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/9ebdd7fd960004e03e1bbc269f9e890d/transformed/sqlite-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/be3c8c3b9135f5c4eec1c20ec552d24b/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/vanditvasa/.gradle/caches/transforms-3/be3c8c3b9135f5c4eec1c20ec552d24b/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/deed656b7130edf43bf944d05e5554f7/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/vanditvasa/.gradle/caches/transforms-3/deed656b7130edf43bf944d05e5554f7/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/cff35f5198838cf6b2c54ce755705419/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/cff35f5198838cf6b2c54ce755705419/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/58c7477d5076e90862d3497c726a1231/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/58c7477d5076e90862d3497c726a1231/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/692a367f45f33d451f4b179e863d6a97/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/692a367f45f33d451f4b179e863d6a97/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/2c5b41e0a255a620dc56ea707d443c59/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/2c5b41e0a255a620dc56ea707d443c59/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.dagger:dagger-lint-aar:2.44.2] /Users/vanditvasa/.gradle/caches/transforms-3/4951b905e109a7d7803e5a63b0def11e/transformed/dagger-lint-aar-2.44.2/AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.44.2] /Users/vanditvasa/.gradle/caches/transforms-3/4951b905e109a7d7803e5a63b0def11e/transformed/dagger-lint-aar-2.44.2/AndroidManifest.xml:18:3-42
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+		ADDED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/vanditvasa/AndroidStudioProjects/ISTEVIT/app/src/main/AndroidManifest.xml
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/vanditvasa/.gradle/caches/transforms-3/293233ebfa429309ca92072642cdb765/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/29e964bf3fe41fcc424c14862fa9375f/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/29e964bf3fe41fcc424c14862fa9375f/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/9b2bd8e5b6696f3c0051f1c915b31966/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/vanditvasa/.gradle/caches/transforms-3/9b2bd8e5b6696f3c0051f1c915b31966/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/vanditvasa/.gradle/caches/transforms-3/4e354942ce9f518ed71aebb8318143c7/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+permission#in.istevit.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+uses-permission#in.istevit.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/vanditvasa/.gradle/caches/transforms-3/21e0b148f4262ffec5541a54ae8eab6b/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/53df509dd0435aee32e59bab4bbb0b8d/transformed/room-runtime-2.4.3/AndroidManifest.xml:25:9-28:40
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/53df509dd0435aee32e59bab4bbb0b8d/transformed/room-runtime-2.4.3/AndroidManifest.xml:28:13-37
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/53df509dd0435aee32e59bab4bbb0b8d/transformed/room-runtime-2.4.3/AndroidManifest.xml:27:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.4.3] /Users/vanditvasa/.gradle/caches/transforms-3/53df509dd0435aee32e59bab4bbb0b8d/transformed/room-runtime-2.4.3/AndroidManifest.xml:26:13-74
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/29e964bf3fe41fcc424c14862fa9375f/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/29e964bf3fe41fcc424c14862fa9375f/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/vanditvasa/.gradle/caches/transforms-3/29e964bf3fe41fcc424c14862fa9375f/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78

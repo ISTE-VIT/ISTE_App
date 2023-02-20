@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/activity_blog_details.xml",
+        "source": "in.istevit.app-main-61:/layout/activity_blog_details.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/fragment_announcements.xml",
+        "source": "in.istevit.app-main-61:/layout/fragment_announcements.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_gallery_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_gallery_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_resources_detail_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_resources_detail_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/activity_projects.xml",
+        "source": "in.istevit.app-main-61:/layout/activity_projects.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_tracks_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_tracks_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/activity_event_details.xml",
+        "source": "in.istevit.app-main-61:/layout/activity_event_details.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/fragment_event.xml",
+        "source": "in.istevit.app-main-61:/layout/fragment_event.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/activity_flagship_details.xml",
+        "source": "in.istevit.app-main-61:/layout/activity_flagship_details.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/fragment_gallery.xml",
+        "source": "in.istevit.app-main-61:/layout/fragment_gallery.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/fragment_blog.xml",
+        "source": "in.istevit.app-main-61:/layout/fragment_blog.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/activity_splash.xml",
+        "source": "in.istevit.app-main-61:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_flagship_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_flagship_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_project_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_project_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_carousel_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_carousel_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_events_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_events_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/activity_resources.xml",
+        "source": "in.istevit.app-main-61:/layout/activity_resources.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/activity_on_boarding.xml",
+        "source": "in.istevit.app-main-61:/layout/activity_on_boarding.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/activity_flagship.xml",
+        "source": "in.istevit.app-main-61:/layout/activity_flagship.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/fragment_onboarding.xml",
+        "source": "in.istevit.app-main-61:/layout/fragment_onboarding.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/activity_resources_detail.xml",
+        "source": "in.istevit.app-main-61:/layout/activity_resources_detail.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_resources_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_resources_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_resources_inner_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_resources_inner_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_announcements_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_announcements_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/single_blogs_item.xml",
+        "source": "in.istevit.app-main-61:/layout/single_blogs_item.xml"
+    },
+    {
+        "merged": "in.istevit.app-mergeReleaseResources-59:/layout/activity_main.xml",
+        "source": "in.istevit.app-main-61:/layout/activity_main.xml"
+    }
+]

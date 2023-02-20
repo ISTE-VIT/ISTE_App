@@ -1,13 +1,12 @@
 package `in`.istevit.app.ui.resources
 
-import `in`.istevit.app.BuildConfig
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import `in`.istevit.app.R
 import `in`.istevit.app.adapters.ResourcesAdapter
 import `in`.istevit.app.data.model.resources.ResourcesData
 import `in`.istevit.app.databinding.ActivityResourcesBinding
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import androidx.recyclerview.widget.LinearLayoutManager
 
 class ResourcesActivity : AppCompatActivity() {
     lateinit var binding: ActivityResourcesBinding

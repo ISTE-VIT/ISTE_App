@@ -1,6 +1,5 @@
 package `in`.istevit.app.ui.gallery
 
-import `in`.istevit.app.data.database.ImagesDao
 import `in`.istevit.app.data.model.GalleryModel
 import `in`.istevit.app.data.repository.gallery.GalleryRepoImpl
 import androidx.lifecycle.LiveData
@@ -13,7 +12,6 @@ import javax.inject.Inject
 @HiltViewModel
 class GalleryViewmodel @Inject constructor(
     private val repo: GalleryRepoImpl,
-    private val dao: ImagesDao,
 ) : ViewModel() {
     var galleryData: LiveData<List<GalleryModel>> = repo.getGalleryData()
 

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "in.istevit.app-mergeReleaseResources-58:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/vanditvasa/.gradle/caches/transforms-3/39012365dc6966c904450ae21de58166/transformed/appcompat-1.5.1/res/values-ldltr-v21/values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}

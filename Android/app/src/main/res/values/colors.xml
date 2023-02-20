@@ -13,4 +13,5 @@
     <color name="bg_color">#0C1223</color>
     <color name="dark_blue">#141D35</color>
     <color name="blue">#27A5EF</color>
+    <color name="shimmer">#DDDDDD</color>
 </resources>

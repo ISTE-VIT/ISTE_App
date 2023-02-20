@@ -69,13 +69,12 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/tracksHeading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins_bold"
-                    android:text="@{flagshipDetailsItem.eventName + ` Tracks`}"
                     android:textColor="@color/blue"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +85,7 @@
                     android:id="@+id/tracks_recView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/tracksHeading" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

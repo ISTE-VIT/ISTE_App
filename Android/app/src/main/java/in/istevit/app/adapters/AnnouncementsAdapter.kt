@@ -45,12 +45,16 @@ class AnnouncementsAdapter(val context: Context): ListAdapter<HomeAnnouncementsD
                 announcementsRoot.setOnClickListener {
                     if(item.type == "blog"){
                         val mIntent = Intent(announcementsRoot.context, BlogDetailsActivity::class.java)
-                        val data = BlogDetailsModel(title = item.title, description = item.description, writer = item.author, image = item.image, link = item.link, date = item.date)
+                        val data = BlogDetailsModel(title = item.title, description = item.description, writer = item.author, image = item.image, link = item.link!!, date = item.date)
                         mIntent.putExtra("blogItem", data)
                         announcementsRoot.context.startActivity(mIntent)
                     } else if(item.type == "event"){
                         val mIntent = Intent(announcementsRoot.context, EventDetailsActivity::class.java)
-                        val data = EventDetailsModel(title = item.title, description = item.description, image = item.image, speaker = item.author, link = item.link, date = item.date, time = item.time, platform = item.platform, category = item.category)
+                        var data: EventDetailsModel = if(item.link != null) {
+                            EventDetailsModel(title = item.title, description = item.description, image = item.image, speaker = item.author, link = item.link, date = item.date, time = item.time!!, platform = item.platform!!, category = item.category, filter = item.filter)
+                        } else {
+                            EventDetailsModel(title = item.title, description = item.description, image = item.image, speaker = item.author, date = item.date, time = item.time!!, platform = item.platform!!, category = item.category, filter = item.filter)
+                        }
                         mIntent.putExtra("eventItem", data)
                         announcementsRoot.context.startActivity(mIntent)
                     }

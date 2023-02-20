@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/vanditvasa/AndroidStudioProjects/ISTE App/App/app"
+    name=":app"
+    type="APP"
+    maven="ISTE VIT:app:"
+    gradle="7.3.1"
+    buildFolder="build"
+    bootClassPath="/Users/vanditvasa/Library/Android/sdk/platforms/android-33/android.jar:/Users/vanditvasa/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-33"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

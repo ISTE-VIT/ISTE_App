@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                              
+                                                       
+                                                  
+                                             
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color" android:tag="layout/fragment_event_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context=".ui.events.EventFragment">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@color/dark_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="12dp"
+                android:text="EVENTS"
+                android:textColor="@color/white"
+                android:textFontWeight="700"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scrollview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_all"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:checked="true"
+                    android:fontFamily="@font/roboto"
+                    android:text="All"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text"
+                    app:chipBackgroundColor="@color/chip_background"
+                    app:chipStrokeColor="@color/blue"
+                    app:chipStrokeWidth="2dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ongoing"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Ongoing"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text"
+                    app:chipBackgroundColor="@color/chip_background"
+                    app:chipStrokeColor="@color/blue"
+                    app:chipStrokeWidth="2dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_upcoming"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Upcoming"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text"
+                    app:chipBackgroundColor="@color/chip_background"
+                    app:chipStrokeColor="@color/blue"
+                    app:chipStrokeWidth="2dp" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_completed"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Completed"
+                    android:textAlignment="center"
+                    android:textColor="@color/chip_text"
+                    app:chipBackgroundColor="@color/chip_background"
+                    app:chipStrokeColor="@color/blue"
+                    app:chipStrokeWidth="2dp" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_scrollview" />
+
+        <ProgressBar
+            android:id="@+id/progress_circular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginHorizontal="10dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horizontal_scrollview"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty_lottie" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+         

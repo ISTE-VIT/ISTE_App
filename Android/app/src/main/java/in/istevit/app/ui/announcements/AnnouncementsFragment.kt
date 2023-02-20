@@ -1,9 +1,7 @@
 package `in`.istevit.app.ui.announcements
 
-import `in`.istevit.app.adapters.AnnouncementsAdapter
-import `in`.istevit.app.adapters.CarouselAdapter
-import `in`.istevit.app.data.model.home.HomeCarouselData
-import `in`.istevit.app.databinding.FragmentAnnouncementsBinding
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,23 +11,34 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
+import dagger.hilt.android.AndroidEntryPoint
+import `in`.istevit.app.adapters.AnnouncementsAdapter
+import `in`.istevit.app.adapters.CarouselAdapter
+import `in`.istevit.app.data.model.home.HomeAnnouncementsData
+import `in`.istevit.app.data.model.home.HomeCarouselData
+import `in`.istevit.app.databinding.FragmentAnnouncementsBinding
+import `in`.istevit.app.util.Result
 import java.util.*
 
+@AndroidEntryPoint
 class AnnouncementsFragment : Fragment() {
     lateinit var binding: FragmentAnnouncementsBinding
     private lateinit var carouselAdapter: CarouselAdapter
     private lateinit var announcementsAdapter: AnnouncementsAdapter
     private var carouselList = mutableListOf<HomeCarouselData>()
-    lateinit var viewModel: AnnouncementsViewModel
+    private var announcementsList = mutableListOf<HomeAnnouncementsData>()
     private lateinit var carouselLayoutManager: LinearLayoutManager
     private lateinit var announcementsLayoutManager: LinearLayoutManager
 
+    private val viewModel by lazy {
+        ViewModelProvider(requireActivity())[AnnouncementsViewModel::class.java]
+    }
     private var timer: Timer? = null
     private var timerTask: TimerTask? = null
     private var position = 0
 
-    private var announcementsLoaded = false;
-    private var carouselLoaded = false;
+    private var announcementsLoaded = false
+    private var carouselLoaded = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,29 +66,84 @@ class AnnouncementsFragment : Fragment() {
         announcementsLayoutManager = LinearLayoutManager(requireContext())
         binding.announcementsRecview.layoutManager = announcementsLayoutManager
 
-        viewModel = ViewModelProvider(requireActivity())[AnnouncementsViewModel::class.java]
+        val ai: ApplicationInfo? = context?.let {
+            context?.packageManager
+                ?.getApplicationInfo(it.packageName, PackageManager.GET_META_DATA)
+        }
+        val value = ai?.metaData?.get("API_KEY")
+        val key = value.toString()
 
-        if(viewModel.announcementsList.value != null && viewModel.carouselList.value != null){
-            announcementsAdapter.submitList(viewModel.announcementsList.value)
-            carouselList = viewModel.carouselList.value!!.toMutableList()
+        if (viewModel.announcementsList.value != null && viewModel.carouselList.value != null) {
+            when (val res = viewModel.carouselList.value!!) {
+                is Result.Success -> {
+                    carouselList.addAll(res.data)
+                }
+
+                else -> {
+                    viewModel.fetchCarouselData(key)
+                }
+            }
             carouselAdapter.submitList(carouselList)
-            isAnnouncementsLoaded()
+            binding.progressCircular.visibility = View.GONE
+
+            when(val res = viewModel.announcementsList.value!!) {
+                is Result.Success -> {
+                    announcementsList.addAll(res.data)
+                }
+
+                else -> {
+                    viewModel.fetchAnnouncements(key)
+                }
+            }
+            announcementsAdapter.submitList(announcementsList)
+            binding.progressCircular.visibility = View.GONE
         } else {
-            viewModel.fetchAnnouncements()
-            viewModel.fetchCarouselData()
+            viewModel.fetchCarouselData(key)
+            viewModel.fetchAnnouncements(key)
+        }
+
+        binding.retryBTN.setOnClickListener {
+            viewModel.fetchAnnouncements(key)
+            viewModel.fetchCarouselData(key)
         }
 
         viewModel.announcementsList.observe(viewLifecycleOwner) {
-            announcementsAdapter.submitList(it.toMutableList())
-            announcementsLoaded = true
-            isAnnouncementsLoaded()
+            when (it) {
+                is Result.Loading -> {
+                    binding.errorLayout.visibility = View.GONE
+                    binding.progressCircular.visibility = View.VISIBLE
+                }
+                is Result.Success -> {
+                    announcementsAdapter.submitList(it.data)
+                    announcementsLoaded = true
+                    isAnnouncementsLoaded()
+                }
+                else -> {
+                    binding.errorLayout.visibility = View.VISIBLE
+                    binding.progressCircular.visibility = View.GONE
+                }
+            }
         }
 
         viewModel.carouselList.observe(viewLifecycleOwner) {
-            carouselList = it.toMutableList()
-            carouselAdapter.submitList(carouselList)
-            carouselLoaded = true
-            isAnnouncementsLoaded()
+            when (it) {
+                is Result.Loading -> {
+                    binding.errorLayout.visibility = View.GONE
+                    binding.progressCircular.visibility = View.VISIBLE
+                }
+
+                is Result.Success -> {
+                    carouselAdapter.submitList(it.data)
+                    carouselLoaded = true
+                    binding.errorLayout.visibility = View.GONE
+                    isAnnouncementsLoaded()
+                }
+
+                else -> {
+                    binding.errorLayout.visibility = View.VISIBLE
+                    binding.progressCircular.visibility = View.GONE
+                }
+            }
         }
 
         binding.carouselRecview.setOnScrollListener(object : RecyclerView.OnScrollListener() {
@@ -95,7 +159,7 @@ class AnnouncementsFragment : Fragment() {
         })
     }
 
-    fun runAutoScrollingCarousel(){
+    fun runAutoScrollingCarousel() {
         if (timer == null && timerTask == null) {
             timer = Timer()
             timerTask = object : TimerTask() {
@@ -116,28 +180,7 @@ class AnnouncementsFragment : Fragment() {
         }
     }
 
-//    override fun onSaveInstanceState(outState: Bundle) {
-//        super.onSaveInstanceState(outState)
-//
-//        val gson = Gson()
-//        val json = gson.toJson(carouselList)
-//        outState.putString("Carousel_data", json)
-//    }
-
-//    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-//        super.onViewStateRestored(savedInstanceState)
-//
-//        if(savedInstanceState != null){
-//            val json = savedInstanceState.getString("Carousel_data")
-//            if(json!!.isNotEmpty()){
-//                val gson = Gson()
-//                val cList = gson.fromJson<String>(json, HomeCarouselData::class.java)
-//                Log.d("TAG", cList.toString())
-//            }
-//        }
-//    }
-
-    fun stopAutoScrollCarousel(){
+    fun stopAutoScrollCarousel() {
         if (timer != null && timerTask != null) {
             timerTask!!.cancel()
             timer!!.cancel()
@@ -147,10 +190,11 @@ class AnnouncementsFragment : Fragment() {
         }
     }
 
-    private fun isAnnouncementsLoaded(){
-        if(announcementsLoaded && carouselLoaded){
+    private fun isAnnouncementsLoaded() {
+        if (announcementsLoaded && carouselLoaded) {
             binding.apply {
                 progressCircular.visibility = View.GONE
+                errorLayout.visibility = View.GONE
                 announcementsTV.visibility = View.VISIBLE
                 announcementsRecview.visibility = View.VISIBLE
                 carouselRecview.visibility = View.VISIBLE

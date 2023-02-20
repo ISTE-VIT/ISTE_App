@@ -7,9 +7,10 @@ data class HomeAnnouncementsData(
     val date: String,
     val description: String,
     val image: String,
-    val link: String,
-    val platform: String,
-    val time: String,
+    val link: String? = null,
+    val platform: String?,
+    val time: String?,
     val title: String,
-    val type: String
+    val type: String,
+    val filter: String?
 )

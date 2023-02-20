@@ -5,34 +5,62 @@ import `in`.istevit.app.data.model.ProjectsModel
 import `in`.istevit.app.databinding.ActivityProjectsBinding
 import `in`.istevit.app.ui.WebviewActivity
 import android.content.Intent
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
+import `in`.istevit.app.util.Result
 
 @AndroidEntryPoint
-class ProjectsActivity : AppCompatActivity(),  ProjectOnClickCallback{
+class ProjectsActivity : AppCompatActivity(), ProjectOnClickCallback {
     lateinit var binding: ActivityProjectsBinding
     lateinit var adapter: ProjectsAdapter
-    lateinit var viewmodel: ProjectsViewmodel
+
+    private val viewModel by lazy {
+        ViewModelProvider(this)[ProjectsViewmodel::class.java]
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProjectsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewmodel = ViewModelProvider(this)[ProjectsViewmodel::class.java]
-        viewmodel.getProjects()
-        viewmodel.projectsList.observe(this){
-            binding.progressCircular.visibility = View.GONE
-            adapter.submitList(it.toMutableList())
+        val ai: ApplicationInfo? = this.let {
+            packageManager
+                ?.getApplicationInfo(it.packageName, PackageManager.GET_META_DATA)
         }
+        val value = ai?.metaData?.get("API_KEY")
+        val key = value.toString()
 
         adapter = ProjectsAdapter(this).also { it.setCallback(this) }
         binding.projectsRecview.adapter = adapter
         binding.projectsRecview.layoutManager = GridLayoutManager(this, 2)
+
+        viewModel.projectsList.observe(this) {
+            when (it) {
+                is Result.Loading -> {
+                    binding.progressCircular.visibility = View.VISIBLE
+                    binding.errorLayout.visibility = View.GONE
+                }
+                is Result.Success -> {
+                    adapter.submitList(it.data)
+                    binding.progressCircular.visibility = View.GONE
+                }
+
+                else -> {
+                    binding.progressCircular.visibility = View.GONE
+                    binding.errorLayout.visibility = View.VISIBLE
+                }
+            }
+        }
+
+        binding.retryBTN.setOnClickListener {
+            viewModel.fetchProjects(key)
+        }
     }
 
     override fun onProjectClick(item: ProjectsModel) {

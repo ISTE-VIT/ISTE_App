@@ -11,4 +11,6 @@
 
     <string name="UPCOMING_EVENT">upcoming</string>
     <string name="COMPLETED_EVENT">completed</string>
+
+    <string name="NETWORK_ERROR">An error occurred while loading the data</string>
 </resources>

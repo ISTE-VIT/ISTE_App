@@ -58,6 +58,8 @@ class OgpViewModel : ViewModel() {
                         }
                         resLinks.add(openGraphResult)
                     } catch (e: Exception) {
+                        val emptyList: List<ResourcesOgpData> = listOf()
+                        ogpLiveData.postValue(emptyList)
                         e.printStackTrace()
                     }
                 }

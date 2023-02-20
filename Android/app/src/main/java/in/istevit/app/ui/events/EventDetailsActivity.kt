@@ -1,9 +1,8 @@
 package `in`.istevit.app.ui.events
 
-import `in`.istevit.app.R
-import `in`.istevit.app.data.model.EventDetailsModel
-import `in`.istevit.app.databinding.ActivityEventDetailsBinding
 import android.app.*
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
@@ -11,6 +10,10 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
+import `in`.istevit.app.R
+import `in`.istevit.app.data.model.EventDetailsModel
+import `in`.istevit.app.databinding.ActivityEventDetailsBinding
+
 
 class EventDetailsActivity : AppCompatActivity() {
     lateinit var binding: ActivityEventDetailsBinding
@@ -27,29 +30,27 @@ class EventDetailsActivity : AppCompatActivity() {
 
             event = intent.getSerializableExtra("eventItem") as EventDetailsModel?
 
-//            when (event?.filter) {
-//                "completed" -> {
-//                    timeTitle.visibility = View.GONE
-//                    timeTV.visibility = View.GONE
-//                    button.text = "Watch Now!"
-//                }
-//                "upcoming" -> {
-//                    timeTitle.visibility = View.VISIBLE
-//                    timeTV.visibility = View.VISIBLE
-//                    button.text = "RSVP"
-////                    scheduleNotification()
-//                }
-//                "ongoing" -> {
-//                    timeTitle.visibility = View.VISIBLE
-//                    timeTV.visibility = View.VISIBLE
-//                    button.text = "Join In!"
-//                }
-//            }
+            when (event?.filter) {
+                "completed" -> {
+                    timeTitle.visibility = View.GONE
+                    timeTV.visibility = View.GONE
+                    button.text = "Watch Now!"
+                }
+                "upcoming" -> {
+                    timeTitle.visibility = View.VISIBLE
+                    timeTV.visibility = View.VISIBLE
+                    button.visibility = View.GONE
+                }
+                "ongoing" -> {
+                    timeTitle.visibility = View.VISIBLE
+                    timeTV.visibility = View.VISIBLE
+                    button.text = "Join In!"
+                }
+            }
 
-            if (event?.link != null) {
-                timeTitle.visibility = View.GONE
-                timeTV.visibility = View.GONE
-                button.text = "Watch Now!"
+            button.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(event?.link))
+                startActivity(intent)
             }
         }
     }
