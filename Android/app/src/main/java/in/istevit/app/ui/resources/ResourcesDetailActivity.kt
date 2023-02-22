@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.viven.imagezoom.ImageZoomHelper
 import dagger.hilt.android.AndroidEntryPoint
+import `in`.istevit.app.R
 import `in`.istevit.app.util.Result
 
 @AndroidEntryPoint
@@ -62,6 +63,7 @@ class ResourcesDetailActivity : AppCompatActivity() {
                     binding.resourcesItem = resData
                     Glide.with(binding.imageView)
                         .load(resData.roadmap)
+                        .placeholder(R.drawable.placeholder_image)
                         .centerCrop()
                         .into(binding.imageView)
                 }

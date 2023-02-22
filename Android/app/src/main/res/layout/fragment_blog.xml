@@ -107,6 +107,19 @@
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/empty_lottie" />
 
+        <TextView
+            android:id="@+id/emptyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oops! No Events"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/animationView"
+            app:layout_constraintStart_toStartOf="@+id/animationView"
+            app:layout_constraintTop_toBottomOf="@+id/animationView" />
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/errorLayout"
             android:layout_width="match_parent"

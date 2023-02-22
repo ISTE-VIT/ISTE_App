@@ -11,6 +11,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import `in`.istevit.app.R
 
 class CarouselAdapter(val context: Context): ListAdapter<HomeCarouselData, CarouselAdapter.ItemViewHolder>(DiffUtil()) {
 
@@ -49,6 +50,7 @@ class CarouselAdapter(val context: Context): ListAdapter<HomeCarouselData, Carou
 fun loadCarouselImage(item_imageView: ImageView, url: String){
     Glide.with(item_imageView)
         .load(url)
+        .placeholder(R.drawable.placeholder_image)
         .centerCrop()
         .into(item_imageView)
 }

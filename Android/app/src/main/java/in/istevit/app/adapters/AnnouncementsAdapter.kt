@@ -15,6 +15,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import `in`.istevit.app.R
 
 class AnnouncementsAdapter(val context: Context): ListAdapter<HomeAnnouncementsData, AnnouncementsAdapter.ItemViewHolder>(DiffUtil()) {
 
@@ -68,6 +69,7 @@ class AnnouncementsAdapter(val context: Context): ListAdapter<HomeAnnouncementsD
 fun loadAnnouncementsImage(item_imageView: ImageView, url: String){
     Glide.with(item_imageView)
         .load(url)
+        .placeholder(R.drawable.placeholder_image)
         .centerCrop()
         .into(item_imageView)
 }

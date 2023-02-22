@@ -111,8 +111,10 @@ class BlogFragment : Fragment(), BlogOnCLickCallback {
                             var temp = blogsList.filter { it.filter == "recents" }
                             if (temp.isEmpty()) {
                                 binding.animationView.visibility = View.VISIBLE
+                                binding.emptyTV.visibility = View.VISIBLE
                             } else {
                                 binding.animationView.visibility = View.GONE
+                                binding.emptyTV.visibility = View.GONE
                             }
                             blogAdapter.submitList(temp.toMutableList())
                         }

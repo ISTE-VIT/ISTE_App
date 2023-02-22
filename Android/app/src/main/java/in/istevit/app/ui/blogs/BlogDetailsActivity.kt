@@ -36,12 +36,14 @@ class BlogDetailsActivity : AppCompatActivity(), ReadCallback {
         bottomSheetDialog = BottomSheetDialog(this)
         view = layoutInflater.inflate(R.layout.bottom_sheet_webview, null)
         view.findViewById<WebView>(R.id.webView_bottom_sheet).loadUrl(binding.blog?.link!!)
-        view.findViewById<ImageView>(R.id.bottom_sheet_webview_close).setOnClickListener { bottomSheetDialog.dismiss() }
-        view.findViewById<ImageView>(R.id.bottom_sheet_webview_reload).setOnClickListener { view.findViewById<WebView>(R.id.webView_bottom_sheet).reload() }
+        view.findViewById<ImageView>(R.id.bottom_sheet_webview_close)
+            .setOnClickListener { bottomSheetDialog.dismiss() }
+        view.findViewById<ImageView>(R.id.bottom_sheet_webview_reload)
+            .setOnClickListener { view.findViewById<WebView>(R.id.webView_bottom_sheet).reload() }
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(item.itemId == android.R.id.home){
+        if (item.itemId == android.R.id.home) {
             onBackPressed()
         }
         return super.onOptionsItemSelected(item)
@@ -52,16 +54,20 @@ class BlogDetailsActivity : AppCompatActivity(), ReadCallback {
         bottomSheetDialog.show()
     }
 
-    companion object{
+    companion object {
         @BindingAdapter("loadImage")
         @JvmStatic
         fun loadImage(view: ImageView, url: String) {
-            Glide.with(view).load(url).centerCrop().into(view)
+            Glide.with(view)
+                .load(url)
+                .placeholder(R.drawable.placeholder_image)
+                .centerCrop()
+                .into(view)
         }
 
         @BindingAdapter("setCallback", "blogData")
         @JvmStatic
-        fun setCallback(view: Button, callback: ReadCallback, blog: BlogDetailsModel){
+        fun setCallback(view: Button, callback: ReadCallback, blog: BlogDetailsModel) {
             view.setOnClickListener { callback.onRead(blog.link) }
         }
     }

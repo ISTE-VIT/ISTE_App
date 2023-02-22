@@ -66,7 +66,11 @@ class EventDetailsActivity : AppCompatActivity() {
         @BindingAdapter("loadEventImage")
         @JvmStatic
         fun loadEventImage(view: ImageView, url: String) {
-            Glide.with(view).load(url).centerCrop().into(view)
+            Glide.with(view)
+                .load(url)
+                .placeholder(R.drawable.placeholder_image)
+                .centerCrop()
+                .into(view)
         }
     }
 }

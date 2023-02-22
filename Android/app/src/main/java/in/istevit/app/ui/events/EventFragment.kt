@@ -118,8 +118,10 @@ class EventFragment : Fragment(), EventOnClickCallback{
                             eventAdapter.submitList(temp.toMutableList())
                             if(temp.isEmpty()){
                                 binding.animationView.visibility = View.VISIBLE
+                                binding.emptyTV.visibility = View.VISIBLE
                             } else {
                                 binding.animationView.visibility = View.GONE
+                                binding.emptyTV.visibility = View.GONE
                             }
                         }
                         R.id.chip_completed -> {
@@ -127,8 +129,10 @@ class EventFragment : Fragment(), EventOnClickCallback{
                             eventAdapter.submitList(temp.toMutableList())
                             if(temp.isEmpty()){
                                 binding.animationView.visibility = View.VISIBLE
+                                binding.emptyTV.visibility = View.VISIBLE
                             } else {
                                 binding.animationView.visibility = View.GONE
+                                binding.emptyTV.visibility = View.GONE
                             }
                         }
                         R.id.chip_upcoming -> {
@@ -136,8 +140,10 @@ class EventFragment : Fragment(), EventOnClickCallback{
                             eventAdapter.submitList(temp.toMutableList())
                             if(temp.isEmpty()){
                                 binding.animationView.visibility = View.VISIBLE
+                                binding.emptyTV.visibility = View.VISIBLE
                             } else {
                                 binding.animationView.visibility = View.GONE
+                                binding.emptyTV.visibility = View.GONE
                             }
                         }
                     }

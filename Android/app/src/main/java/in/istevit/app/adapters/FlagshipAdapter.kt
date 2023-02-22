@@ -11,6 +11,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import `in`.istevit.app.R
 
 class FlagshipAdapter(val context: Context): ListAdapter<FlagshipModel, FlagshipAdapter.ItemViewHolder>(DiffUtil()) {
     lateinit var flagshipCallback: FlagshipOnClickCallback
@@ -51,6 +52,7 @@ class FlagshipAdapter(val context: Context): ListAdapter<FlagshipModel, Flagship
 fun loadFlagshipImage(item_imageView: ImageView, url: String){
     Glide.with(item_imageView)
         .load(url)
+        .placeholder(R.drawable.placeholder_image)
         .centerCrop()
         .into(item_imageView)
 }

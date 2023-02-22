@@ -11,6 +11,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import `in`.istevit.app.R
 
 class ProjectsAdapter(val context: Context): ListAdapter<ProjectsModel,ProjectsAdapter.ItemViewHolder>(DiffUtil()) {
 
@@ -52,6 +53,7 @@ class ProjectsAdapter(val context: Context): ListAdapter<ProjectsModel,ProjectsA
 fun loadProjectImage(item_imageView: ImageView, url: String){
     Glide.with(item_imageView)
         .load(url)
+        .placeholder(R.drawable.placeholder_image)
         .centerCrop()
         .into(item_imageView)
 }

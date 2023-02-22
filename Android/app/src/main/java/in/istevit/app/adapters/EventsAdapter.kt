@@ -13,6 +13,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import `in`.istevit.app.R
 
 class EventsAdapter (val context: Context): ListAdapter<EventDetailsModel, EventsAdapter.ItemViewHolder>(DiffUtil()){
     private lateinit var eventOnClickCallback: EventOnClickCallback
@@ -63,6 +64,7 @@ class EventsAdapter (val context: Context): ListAdapter<EventDetailsModel, Event
 fun loadEventsImage(item_imageView: ImageView, url: String){
     Glide.with(item_imageView)
         .load(url)
+        .placeholder(R.drawable.placeholder_image)
         .centerCrop()
         .into(item_imageView)
 }
