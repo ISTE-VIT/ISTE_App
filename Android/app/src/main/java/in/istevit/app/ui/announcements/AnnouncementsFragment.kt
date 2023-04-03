@@ -88,9 +88,6 @@ class AnnouncementsFragment : Fragment() {
             }
             announcementsAdapter.submitList(announcementsList)
             binding.progressCircular.visibility = View.GONE
-        } else {
-            viewModel.fetchCarouselData()
-            viewModel.fetchAnnouncements()
         }
 
         binding.retryBTN.setOnClickListener {

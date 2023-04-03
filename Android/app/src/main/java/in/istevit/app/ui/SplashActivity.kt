@@ -1,8 +1,5 @@
 package `in`.istevit.app.ui
 
-import `in`.istevit.app.databinding.ActivitySplashBinding
-import `in`.istevit.app.ui.onBoarding.OnBoardingActivity
-import `in`.istevit.app.util.Constants.Companion.ISTE_SHARED_PREFERENCES
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
@@ -10,7 +7,9 @@ import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import dagger.hilt.android.AndroidEntryPoint
+import `in`.istevit.app.databinding.ActivitySplashBinding
+import `in`.istevit.app.ui.onBoarding.OnBoardingActivity
+import `in`.istevit.app.util.ISTE_SHARED_PREFERENCES
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

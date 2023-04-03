@@ -1,11 +1,11 @@
 package `in`.istevit.app.ui.blogs
 
 import androidx.lifecycle.LiveData
-import `in`.istevit.app.data.model.BlogDetailsModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import `in`.istevit.app.data.model.BlogDetailsModel
 import `in`.istevit.app.data.network.service.CommonNetworkService
 import `in`.istevit.app.util.Result
 import `in`.istevit.app.util.getResult

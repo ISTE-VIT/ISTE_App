@@ -11,7 +11,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import `in`.istevit.app.databinding.FragmentOptionsBinding
 import `in`.istevit.app.ui.flagship.FlagshipActivity
 import `in`.istevit.app.ui.resources.ResourcesActivity
-import `in`.istevit.app.util.Constants
+import `in`.istevit.app.util.*
 
 class OptionsFragment : BottomSheetDialogFragment() {
     private lateinit var binding: FragmentOptionsBinding
@@ -45,12 +45,12 @@ class OptionsFragment : BottomSheetDialogFragment() {
             }
 
             aboutBTN.setOnClickListener {
-                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(Constants.ISTE_WEBSITE)))
+                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(ISTE_WEBSITE)))
                 dismiss()
             }
 
             instagramBTN.setOnClickListener {
-                val uri = Uri.parse(Constants.INSTAGRAM_URL)
+                val uri = Uri.parse(INSTAGRAM_URL)
                 val instaIntent = Intent(Intent.ACTION_VIEW, uri)
                 instaIntent.setPackage("com.instagram.android")
                 try {
@@ -59,7 +59,7 @@ class OptionsFragment : BottomSheetDialogFragment() {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse(Constants.INSTAGRAM_URL)
+                            Uri.parse(INSTAGRAM_URL)
                         )
                     )
                 }
@@ -70,13 +70,13 @@ class OptionsFragment : BottomSheetDialogFragment() {
                 try {
                     activity?.packageManager?.getPackageInfo("com.facebook.katana", 0)
                     val facebookIntent =
-                        Intent(Intent.ACTION_VIEW, Uri.parse(Constants.FACEBOOK_APP_URL))
+                        Intent(Intent.ACTION_VIEW, Uri.parse(FACEBOOK_APP_URL))
                     startActivity(facebookIntent)
                 } catch (e: Exception) {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse(Constants.FACEBOOK_URL)
+                            Uri.parse(FACEBOOK_URL)
                         )
                     )
                 }
@@ -87,13 +87,13 @@ class OptionsFragment : BottomSheetDialogFragment() {
                 try {
                     activity?.packageManager?.getPackageInfo("com.linkedin.android", 0)
                     val linkedinIntent =
-                        Intent(Intent.ACTION_VIEW, Uri.parse(Constants.LINKEDIN_URL))
+                        Intent(Intent.ACTION_VIEW, Uri.parse(LINKEDIN_URL))
                     startActivity(linkedinIntent)
                 } catch (e: Exception) {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse(Constants.LINKEDIN_URL)
+                            Uri.parse(LINKEDIN_URL)
                         )
                     )
                 }
@@ -103,13 +103,13 @@ class OptionsFragment : BottomSheetDialogFragment() {
             githubBTN.setOnClickListener {
                 try {
                     activity?.packageManager?.getPackageInfo("com.github.android", 0)
-                    val githubIntent = Intent(Intent.ACTION_VIEW, Uri.parse(Constants.GITHUB_URL))
+                    val githubIntent = Intent(Intent.ACTION_VIEW, Uri.parse(GITHUB_URL))
                     startActivity(githubIntent)
                 } catch (e: Exception) {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse(Constants.GITHUB_URL)
+                            Uri.parse(GITHUB_URL)
                         )
                     )
                 }
@@ -119,14 +119,14 @@ class OptionsFragment : BottomSheetDialogFragment() {
             youtubeBTN.setOnClickListener {
                 try {
                     val youtubeIntent = Intent(Intent.ACTION_VIEW)
-                    youtubeIntent.data = Uri.parse(Constants.YOUTUBE_URL)
+                    youtubeIntent.data = Uri.parse(YOUTUBE_URL)
                     youtubeIntent.setPackage("com.google.android.youtube")
                     startActivity(youtubeIntent)
                 } catch (e: Exception) {
                     startActivity(
                         Intent(
                             Intent.ACTION_VIEW,
-                            Uri.parse(Constants.FACEBOOK_URL)
+                            Uri.parse(FACEBOOK_URL)
                         )
                     )
                 }

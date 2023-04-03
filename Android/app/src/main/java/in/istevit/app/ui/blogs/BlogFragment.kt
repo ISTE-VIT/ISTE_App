@@ -2,6 +2,7 @@ package `in`.istevit.app.ui.blogs
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,15 +49,14 @@ class BlogFragment : Fragment(), BlogOnCLickCallback {
             viewModel.fetchBlogs()
         }
 
-        if (viewModel.blogsList.value == null) {
-            viewModel.fetchBlogs()
-        } else {
+        if (viewModel.blogsList.value != null) {
             when (val res = viewModel.blogsList.value) {
-                is Result.Success -> blogsList.addAll(res.data)
-                is Result.Loading -> Unit
+                is Result.Success -> {
+                    blogsList.addAll(res.data)
+                    blogAdapter.submitList(blogsList)
+                }
                 else -> viewModel.fetchBlogs()
             }
-            blogAdapter.submitList(blogsList)
             binding.progressCircular.visibility = View.GONE
         }
 
@@ -70,6 +70,7 @@ class BlogFragment : Fragment(), BlogOnCLickCallback {
                     binding.chipRecents.isCheckable = false
                 }
                 is Result.Success -> {
+                    blogsList.clear()
                     blogsList.addAll(it.data)
                     blogAdapter.submitList(blogsList)
                     binding.chipAll.isCheckable = true

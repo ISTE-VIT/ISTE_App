@@ -1,9 +1,5 @@
 package `in`.istevit.app.ui.onBoarding
 
-import `in`.istevit.app.R
-import `in`.istevit.app.databinding.ActivityOnBoardingBinding
-import `in`.istevit.app.ui.MainActivity
-import `in`.istevit.app.util.Constants.Companion.ISTE_SHARED_PREFERENCES
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -14,6 +10,10 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.google.firebase.messaging.FirebaseMessaging
+import `in`.istevit.app.R
+import `in`.istevit.app.databinding.ActivityOnBoardingBinding
+import `in`.istevit.app.ui.MainActivity
+import `in`.istevit.app.util.ISTE_SHARED_PREFERENCES
 
 class OnBoardingActivity : AppCompatActivity() {
     private val context: Context = this
