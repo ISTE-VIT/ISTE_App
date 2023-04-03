@@ -11,6 +11,7 @@ class RetrofitService {
         fun getRetroInstance(): Retrofit {
             val client = OkHttpClient.Builder()
                 .addInterceptor(OkHttpProfilerInterceptor())
+                .addInterceptor(ApiKeyInterceptor())
                 .build()
 
             return Retrofit.Builder()

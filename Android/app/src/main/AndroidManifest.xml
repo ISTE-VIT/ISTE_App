@@ -77,10 +77,6 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <meta-data
-            android:name="API_KEY"
-            android:value="${API_KEY}" />
-
         <service
             android:name=".util.MyFirebaseMessagingService"
             android:exported="false">

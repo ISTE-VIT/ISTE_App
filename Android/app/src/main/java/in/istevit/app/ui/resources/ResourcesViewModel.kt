@@ -20,10 +20,10 @@ class ResourcesViewModel @Inject constructor(
     val resourcesList: LiveData<Result<List<ResourcesDetailModel>>>
         get() = _resourcesList
 
-    fun fetchResources(topic: String, key: String) {
+    fun fetchResources(topic: String) {
         viewModelScope.launch {
             _resourcesList.postValue(Result.Loading())
-            val data = getResult { service.getResources(topic, key) }
+            val data = getResult { service.getResources(topic) }
             _resourcesList.postValue(data)
         }
     }

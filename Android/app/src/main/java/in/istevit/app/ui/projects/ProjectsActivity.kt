@@ -1,18 +1,16 @@
 package `in`.istevit.app.ui.projects
 
-import `in`.istevit.app.adapters.ProjectsAdapter
-import `in`.istevit.app.data.model.ProjectsModel
-import `in`.istevit.app.databinding.ActivityProjectsBinding
-import `in`.istevit.app.ui.WebviewActivity
 import android.content.Intent
-import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
+import `in`.istevit.app.adapters.ProjectsAdapter
+import `in`.istevit.app.data.model.ProjectsModel
+import `in`.istevit.app.databinding.ActivityProjectsBinding
+import `in`.istevit.app.ui.WebviewActivity
 import `in`.istevit.app.util.Result
 
 @AndroidEntryPoint
@@ -28,13 +26,6 @@ class ProjectsActivity : AppCompatActivity(), ProjectOnClickCallback {
         super.onCreate(savedInstanceState)
         binding = ActivityProjectsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val ai: ApplicationInfo? = this.let {
-            packageManager
-                ?.getApplicationInfo(it.packageName, PackageManager.GET_META_DATA)
-        }
-        val value = ai?.metaData?.get("API_KEY")
-        val key = value.toString()
 
         adapter = ProjectsAdapter(this).also { it.setCallback(this) }
         binding.projectsRecview.adapter = adapter
@@ -59,7 +50,7 @@ class ProjectsActivity : AppCompatActivity(), ProjectOnClickCallback {
         }
 
         binding.retryBTN.setOnClickListener {
-            viewModel.fetchProjects(key)
+            viewModel.fetchProjects()
         }
     }
 

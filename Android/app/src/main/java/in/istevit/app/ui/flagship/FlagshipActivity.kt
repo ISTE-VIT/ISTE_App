@@ -1,17 +1,15 @@
 package `in`.istevit.app.ui.flagship
 
-import `in`.istevit.app.adapters.FlagshipAdapter
-import `in`.istevit.app.data.model.FlagshipModel
-import `in`.istevit.app.databinding.ActivityFlagshipBinding
 import android.content.Intent
-import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
+import `in`.istevit.app.adapters.FlagshipAdapter
+import `in`.istevit.app.data.model.FlagshipModel
+import `in`.istevit.app.databinding.ActivityFlagshipBinding
 import `in`.istevit.app.util.Result
 
 @AndroidEntryPoint
@@ -27,13 +25,6 @@ class FlagshipActivity : AppCompatActivity(), FlagshipOnClickCallback{
         super.onCreate(savedInstanceState)
         binding = ActivityFlagshipBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        val ai: ApplicationInfo? = this.let {
-            packageManager
-                ?.getApplicationInfo(it.packageName, PackageManager.GET_META_DATA)
-        }
-        val value = ai?.metaData?.get("API_KEY")
-        val key = value.toString()
 
         adapter = FlagshipAdapter(this).also { it.setCallback(this) }
         binding.recyclerView.adapter = adapter
@@ -58,7 +49,7 @@ class FlagshipActivity : AppCompatActivity(), FlagshipOnClickCallback{
         }
 
         binding.retryBTN.setOnClickListener {
-            viewModel.fetchFlagshipEvents(key)
+            viewModel.fetchFlagshipEvents()
         }
     }
 

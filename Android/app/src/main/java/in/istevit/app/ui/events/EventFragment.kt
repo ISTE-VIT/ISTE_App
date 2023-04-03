@@ -1,8 +1,6 @@
 package `in`.istevit.app.ui.events
 
 import android.content.Intent
-import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,9 +18,9 @@ import `in`.istevit.app.util.Result
 @AndroidEntryPoint
 class EventFragment : Fragment(), EventOnClickCallback{
     lateinit var binding: FragmentEventBinding
-    var eventsList = mutableListOf<EventDetailsModel>()
+    private var eventsList = mutableListOf<EventDetailsModel>()
     private lateinit var eventAdapter: EventsAdapter
-    lateinit var eventLayoutManager: LinearLayoutManager
+    private lateinit var eventLayoutManager: LinearLayoutManager
     private var chId: Int = 1
 
     private val viewModel by lazy {
@@ -40,20 +38,13 @@ class EventFragment : Fragment(), EventOnClickCallback{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val ai: ApplicationInfo? = context?.let {
-            context?.packageManager
-                ?.getApplicationInfo(it.packageName, PackageManager.GET_META_DATA)
-        }
-        val value = ai?.metaData?.get("API_KEY")
-        val key = value.toString()
-
         eventAdapter = EventsAdapter(requireContext()).also { it.setCallback(this) }
         eventLayoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = eventAdapter
         binding.recyclerView.layoutManager = eventLayoutManager
 
         if (viewModel.eventsList.value == null) {
-            viewModel.fetchEvents(key)
+            viewModel.fetchEvents()
         } else {
             when (val res = viewModel.eventsList.value!!) {
                 is Result.Success -> {
@@ -61,7 +52,7 @@ class EventFragment : Fragment(), EventOnClickCallback{
                 }
 
                 else -> {
-                    viewModel.fetchEvents(key)
+                    viewModel.fetchEvents()
                 }
             }
             eventAdapter.submitList(eventsList)
@@ -69,7 +60,7 @@ class EventFragment : Fragment(), EventOnClickCallback{
         }
 
         binding.retryBTN.setOnClickListener {
-            viewModel.fetchEvents(key)
+            viewModel.fetchEvents()
         }
 
         viewModel.eventsList.observe(viewLifecycleOwner) {

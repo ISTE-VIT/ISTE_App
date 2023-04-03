@@ -12,32 +12,32 @@ import retrofit2.http.Path
 interface CommonNetworkService {
     // Home
     @GET("/home/announcements/")
-    suspend fun getAnnouncements(@Header("api_key") api_key: String): Response<List<HomeAnnouncementsData>>
+    suspend fun getAnnouncements(): Response<List<HomeAnnouncementsData>>
 
     @GET("/home/carousel/")
-    suspend fun getCarousel(@Header("api_key") api_key: String): Response<List<HomeCarouselData>>
+    suspend fun getCarousel(): Response<List<HomeCarouselData>>
 
     // Blogs
     @GET("/blogs/all/")
-    suspend fun getBlogs(@Header("api_key") api_key: String): Response<List<BlogDetailsModel>>
+    suspend fun getBlogs(): Response<List<BlogDetailsModel>>
 
     // Events
     @GET("/events/all/")
-    suspend fun getEvents(@Header("api_key") api_key: String): Response<List<EventDetailsModel>>
+    suspend fun getEvents(): Response<List<EventDetailsModel>>
 
     // Gallery
     @GET("/gallery/")
-    suspend fun getGallery(@Header("api_key") api_key: String): Response<List<GalleryModel>>
+    suspend fun getGallery(): Response<List<GalleryModel>>
 
     // Flagship
     @GET("/flagship/")
-    suspend fun getFlagshipEvents(@Header("api_key") api_key: String): Response<List<FlagshipModel>>
+    suspend fun getFlagshipEvents(): Response<List<FlagshipModel>>
 
     // Projects
     @GET("/projects/")
-    suspend fun getProjects(@Header("api_key") api_key: String): Response<List<ProjectsModel>>
+    suspend fun getProjects(): Response<List<ProjectsModel>>
 
     // Resources
     @GET("/resources/find/{res}")
-    suspend fun getResources(@Path("res") res: String, @Header("api_key") api_key: String): Response<List<ResourcesDetailModel>>
+    suspend fun getResources(@Path("res") res: String): Response<List<ResourcesDetailModel>>
 }

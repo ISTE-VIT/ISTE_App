@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
 class GalleryFragment : Fragment() {
     lateinit var binding: FragmentGalleryBinding
-    lateinit var galleryAdapter: GalleryAdapter
+    private lateinit var galleryAdapter: GalleryAdapter
     private val viewModel by lazy {
         ViewModelProvider(requireActivity())[GalleryViewmodel::class.java]
     }

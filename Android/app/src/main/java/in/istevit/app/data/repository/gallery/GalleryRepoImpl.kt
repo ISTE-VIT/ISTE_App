@@ -1,8 +1,5 @@
 package `in`.istevit.app.data.repository.gallery
 
-import android.content.Context
-import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
 import `in`.istevit.app.data.database.ImagesDao
 import `in`.istevit.app.data.network.service.CommonNetworkService
 import android.util.Log
@@ -13,18 +10,11 @@ private const val TAG = "GalleryRepoImpl"
 
 class GalleryRepoImpl @Inject constructor(
     private val dao: ImagesDao,
-    private val service: CommonNetworkService,
-    context: Context
+    private val service: CommonNetworkService
 ) {
-
-    private val ai: ApplicationInfo = context.packageManager
-        .getApplicationInfo(context.packageName, PackageManager.GET_META_DATA)
-    private val value = ai.metaData["API_KEY"]
-    private val key = value.toString()
-
     suspend fun fetchGalleryData() {
         try {
-            val response = service.getGallery(key)
+            val response = service.getGallery()
             if (response.isSuccessful) {
                 dao.insertAll(response.body()!!)
             } else {

@@ -1,7 +1,5 @@
 package `in`.istevit.app.ui.announcements
 
-import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -66,13 +64,6 @@ class AnnouncementsFragment : Fragment() {
         announcementsLayoutManager = LinearLayoutManager(requireContext())
         binding.announcementsRecview.layoutManager = announcementsLayoutManager
 
-        val ai: ApplicationInfo? = context?.let {
-            context?.packageManager
-                ?.getApplicationInfo(it.packageName, PackageManager.GET_META_DATA)
-        }
-        val value = ai?.metaData?.get("API_KEY")
-        val key = value.toString()
-
         if (viewModel.announcementsList.value != null && viewModel.carouselList.value != null) {
             when (val res = viewModel.carouselList.value!!) {
                 is Result.Success -> {
@@ -80,7 +71,7 @@ class AnnouncementsFragment : Fragment() {
                 }
 
                 else -> {
-                    viewModel.fetchCarouselData(key)
+                    viewModel.fetchCarouselData()
                 }
             }
             carouselAdapter.submitList(carouselList)
@@ -92,19 +83,19 @@ class AnnouncementsFragment : Fragment() {
                 }
 
                 else -> {
-                    viewModel.fetchAnnouncements(key)
+                    viewModel.fetchAnnouncements()
                 }
             }
             announcementsAdapter.submitList(announcementsList)
             binding.progressCircular.visibility = View.GONE
         } else {
-            viewModel.fetchCarouselData(key)
-            viewModel.fetchAnnouncements(key)
+            viewModel.fetchCarouselData()
+            viewModel.fetchAnnouncements()
         }
 
         binding.retryBTN.setOnClickListener {
-            viewModel.fetchAnnouncements(key)
-            viewModel.fetchCarouselData(key)
+            viewModel.fetchAnnouncements()
+            viewModel.fetchCarouselData()
         }
 
         viewModel.announcementsList.observe(viewLifecycleOwner) {

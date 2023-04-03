@@ -1,14 +1,7 @@
 package `in`.istevit.app.ui.blogs
 
-import `in`.istevit.app.R
-import `in`.istevit.app.adapters.BlogsAdapter
-import `in`.istevit.app.data.model.BlogDetailsModel
-import `in`.istevit.app.databinding.FragmentBlogBinding
 import android.content.Intent
-import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
+import `in`.istevit.app.R
+import `in`.istevit.app.adapters.BlogsAdapter
+import `in`.istevit.app.data.model.BlogDetailsModel
+import `in`.istevit.app.databinding.FragmentBlogBinding
 import `in`.istevit.app.util.Result
 
 @AndroidEntryPoint
@@ -23,7 +20,7 @@ class BlogFragment : Fragment(), BlogOnCLickCallback {
     lateinit var binding: FragmentBlogBinding
     private var blogsList = mutableListOf<BlogDetailsModel>()
     private lateinit var blogAdapter: BlogsAdapter
-    lateinit var blogLayoutManager: LinearLayoutManager
+    private lateinit var blogLayoutManager: LinearLayoutManager
     private var chId: Int = 1
 
     private val viewModel by lazy {
@@ -41,32 +38,27 @@ class BlogFragment : Fragment(), BlogOnCLickCallback {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val ai: ApplicationInfo? = context?.let {
-            context?.packageManager
-                ?.getApplicationInfo(it.packageName, PackageManager.GET_META_DATA)
-        }
-        val value = ai?.metaData?.get("API_KEY")
-        val key = value.toString()
-
         blogAdapter = BlogsAdapter(requireContext()).also { it.setCallback(this) }
         blogLayoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = blogAdapter
         binding.recyclerView.layoutManager = blogLayoutManager
 
         binding.retryBTN.setOnClickListener {
-            viewModel.fetchBlogs(key)
+            viewModel.fetchBlogs()
         }
 
         if (viewModel.blogsList.value == null) {
-            viewModel.fetchBlogs(key)
+            viewModel.fetchBlogs()
         } else {
-            when (val res = viewModel.blogsList.value!!) {
+            when (val res = viewModel.blogsList.value) {
                 is Result.Success -> {
                     blogsList.addAll(res.data)
                 }
 
+                is Result.Loading -> Unit
+
                 else -> {
-                    viewModel.fetchBlogs(key)
+                    viewModel.fetchBlogs()
                 }
             }
             blogAdapter.submitList(blogsList)

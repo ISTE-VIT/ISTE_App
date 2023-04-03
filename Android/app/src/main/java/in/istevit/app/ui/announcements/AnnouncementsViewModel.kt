@@ -1,14 +1,10 @@
 package `in`.istevit.app.ui.announcements
 
-import android.content.Context
-import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
 import `in`.istevit.app.data.model.home.HomeAnnouncementsData
 import `in`.istevit.app.data.model.home.HomeCarouselData
 import `in`.istevit.app.data.network.service.CommonNetworkService
@@ -21,7 +17,6 @@ const val TAG = "AnnouncementsViewModel"
 
 @HiltViewModel
 class AnnouncementsViewModel @Inject constructor(
-    @ApplicationContext context: Context,
     private val service: CommonNetworkService
 ) : ViewModel() {
     private val _announcementsList: MutableLiveData<Result<List<HomeAnnouncementsData>>> =
@@ -35,26 +30,22 @@ class AnnouncementsViewModel @Inject constructor(
         get() = _carouselList
 
     init {
-        val ai: ApplicationInfo = context.packageManager
-            .getApplicationInfo(context.packageName, PackageManager.GET_META_DATA)
-        val value = ai.metaData["API_KEY"]
-        val key = value.toString()
-        fetchAnnouncements(key)
-        fetchCarouselData(key)
+        fetchAnnouncements()
+        fetchCarouselData()
     }
 
-    fun fetchAnnouncements(key: String) {
+    fun fetchAnnouncements() {
         viewModelScope.launch {
             _announcementsList.postValue(Result.Loading())
-            val result = getResult { service.getAnnouncements(key) }
+            val result = getResult { service.getAnnouncements() }
             _announcementsList.postValue(result)
         }
     }
 
-    fun fetchCarouselData(key: String) {
+    fun fetchCarouselData() {
         viewModelScope.launch {
             _carouselList.postValue(Result.Loading())
-            val result = getResult { service.getCarousel(key) }
+            val result = getResult { service.getCarousel() }
             _carouselList.postValue(result)
         }
     }

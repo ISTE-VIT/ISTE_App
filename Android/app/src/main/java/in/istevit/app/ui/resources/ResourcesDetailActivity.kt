@@ -1,12 +1,6 @@
 package `in`.istevit.app.ui.resources
 
-import android.content.pm.ApplicationInfo
-import android.content.pm.PackageManager
-import `in`.istevit.app.adapters.ResourcesDetailsAdapter
-import `in`.istevit.app.data.model.resources.ResourcesDetailModel
-import `in`.istevit.app.databinding.ActivityResourcesDetailBinding
 import android.os.Bundle
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -16,6 +10,9 @@ import com.bumptech.glide.Glide
 import com.viven.imagezoom.ImageZoomHelper
 import dagger.hilt.android.AndroidEntryPoint
 import `in`.istevit.app.R
+import `in`.istevit.app.adapters.ResourcesDetailsAdapter
+import `in`.istevit.app.data.model.resources.ResourcesDetailModel
+import `in`.istevit.app.databinding.ActivityResourcesDetailBinding
 import `in`.istevit.app.util.Result
 
 @AndroidEntryPoint
@@ -39,18 +36,10 @@ class ResourcesDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val title = intent?.getStringExtra("title")
-        Log.d("ResourcesDetailActivity.kt", "$title")
-
-        val ai: ApplicationInfo? = this.let {
-            packageManager
-                ?.getApplicationInfo(it.packageName, PackageManager.GET_META_DATA)
-        }
-        val value = ai?.metaData?.get("API_KEY")
-        val key = value.toString()
 
         imageZoomHelper = ImageZoomHelper(this)
 
-        resViewModel.fetchResources(title.toString(), key)
+        resViewModel.fetchResources(title.toString())
         resViewModel.resourcesList.observe(this) {
             when (it) {
                 is Result.Loading -> {
@@ -75,7 +64,7 @@ class ResourcesDetailActivity : AppCompatActivity() {
         }
 
         binding.retryBTN.setOnClickListener {
-            resViewModel.fetchResources(title.toString(), key)
+            resViewModel.fetchResources(title.toString())
         }
 
         adapter = ResourcesDetailsAdapter()
