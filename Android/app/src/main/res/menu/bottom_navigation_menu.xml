@@ -18,7 +18,7 @@
 
     <item
         android:id="@+id/nav_more"
-        android:icon="@drawable/ic_round_plus"
+        android:icon="@drawable/ic_options"
         app:cnb_iconColor="@color/blue"
         app:cnb_textColor="@color/blue"
         android:title="" />
