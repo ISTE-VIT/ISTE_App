@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -51,39 +52,30 @@ class BlogFragment : Fragment(), BlogOnCLickCallback {
             viewModel.fetchBlogs()
         } else {
             when (val res = viewModel.blogsList.value) {
-                is Result.Success -> {
-                    blogsList.addAll(res.data)
-                }
-
+                is Result.Success -> blogsList.addAll(res.data)
                 is Result.Loading -> Unit
-
-                else -> {
-                    viewModel.fetchBlogs()
-                }
+                else -> viewModel.fetchBlogs()
             }
             blogAdapter.submitList(blogsList)
             binding.progressCircular.visibility = View.GONE
         }
 
         viewModel.blogsList.observe(viewLifecycleOwner) {
+            toggleLoading(it)
+
             when (it) {
                 is Result.Loading -> {
-                    binding.progressCircular.visibility = View.VISIBLE
                     binding.errorLayout.visibility = View.GONE
                     binding.chipAll.isCheckable = false
                     binding.chipRecents.isCheckable = false
                 }
-
                 is Result.Success -> {
                     blogsList.addAll(it.data)
                     blogAdapter.submitList(blogsList)
-                    binding.progressCircular.visibility = View.GONE
                     binding.chipAll.isCheckable = true
                     binding.chipRecents.isCheckable = true
                 }
-
                 else -> {
-                    binding.progressCircular.visibility = View.GONE
                     binding.errorLayout.visibility = View.VISIBLE
                     binding.chipAll.isCheckable = false
                     binding.chipRecents.isCheckable = false
@@ -115,6 +107,10 @@ class BlogFragment : Fragment(), BlogOnCLickCallback {
                 }
             }
         }
+    }
+
+    private fun toggleLoading(result: Result<*>) {
+        binding.progressCircular.isVisible = result is Result.Loading
     }
 
     override fun onClick(item: BlogDetailsModel) {
