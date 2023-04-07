@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import `in`.istevit.app.databinding.FragmentOptionsBinding
 import `in`.istevit.app.ui.flagship.FlagshipActivity
+import `in`.istevit.app.ui.projects.ProjectsActivity
 import `in`.istevit.app.ui.resources.ResourcesActivity
 import `in`.istevit.app.util.*
 
@@ -40,7 +41,7 @@ class OptionsFragment : BottomSheetDialogFragment() {
             }
 
             projectsBTN.setOnClickListener {
-                startActivity(Intent(activity, FlagshipActivity::class.java))
+                startActivity(Intent(activity, ProjectsActivity::class.java))
                 dismiss()
             }
 
