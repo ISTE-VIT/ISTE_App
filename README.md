@@ -24,7 +24,9 @@ ISTE-VIT app, your exclusive source of information on upcoming events and webina
  ### Tech Stack 
 
 ●	Kotlin - Frontend<br>
-●	Node - Backend<br>
+●	Node and Express- Backend<br>
+●	MongoDB - Database<br>
+●	FCM<br>
 <br>
 <br>
   <hr>
