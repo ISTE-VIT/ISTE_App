@@ -34,7 +34,7 @@ ISTE-VIT app, your exclusive source of information on upcoming events and webina
 
 ### Contributors
 
-- [Vandit Vasa](https://github.com/sai-sahith7)
+- [Vandit Vasa](https://github.com/vendz)
 - [Sai Sahith Bonugala](https://github.com/sai-sahith7)
 - [Nimisha Kumari](https://github.com/nimisha243)
 - [Keertana Jayagopal](https://github.com/Keertanaj)
